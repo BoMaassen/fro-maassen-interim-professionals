@@ -1,0 +1,24 @@
+/*-----CSS RESET-----*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*-----ROOT-----*/
+:root {
+  --purple-color: #811788;
+  --blue-color: #00A0C6;
+  --red-color: #FF0000;
+  --white-color: #fff;
+  --black-color: #000;
+  }
+
+  /*-----FONTS-----*/
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Prozak', sans-serif ;
+  }
+  p {
+    font-family: 'TheSans', sans-serif ;
+    text-transform: uppercase;
+  }
