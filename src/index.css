@@ -24,10 +24,13 @@ h6,
 a {
   font-family: 'Prozak', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+
 }
 
 h1 {
   font-size: 96px;
+  
 }
 
 h2 {
