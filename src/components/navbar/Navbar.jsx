@@ -5,10 +5,9 @@ import { NavLink } from "react-router-dom";
 function Navbar(){
     return (
         <nav>
-            <div>
-                <span>
-                <NavLink to="/"><img src={logoMip} alt="Logo Maassen interim professionals"/></NavLink>
-                </span>
+            <div className="nav-wrapper">
+                 <NavLink to="/"><span><img src={logoMip} alt="Logo Maassen interim professionals"/></span></NavLink>
+                
             <ul>
             <li><NavLink to="/opdrachten" className={({ isActive}) => isActive ? 'active-link' : 'default-link'}>Opdrachten</NavLink></li>
             <li><NavLink to="/over-ons" className={({ isActive}) => isActive ? 'active-link' : 'default-link'}>Over ons</NavLink></li>
