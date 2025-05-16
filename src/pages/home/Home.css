@@ -1,0 +1,45 @@
+/*-----INTRODUCTION-SECTION-----*/
+.introduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    padding: 50px 0;
+    gap: 121px;
+}
+
+/*-----INTRODUCTION-TEKST-----*/
+.intro-tekst{
+    height: 300px;
+    flex: 2;
+}
+
+.intro-tekst h2{
+    margin-bottom: 15px;
+}
+/*-----INTRODUCTION-USPS-----*/
+.usps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    flex: 3;
+}
+.usp div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.usp1 h3{
+    color: var(--red-color);
+}
+
+.usp2 h3{
+    color: var(--purple-color);
+}
+
+.usp3 h3{
+    color: var(--blue-color);
+}
