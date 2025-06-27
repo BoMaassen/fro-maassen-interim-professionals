@@ -1,6 +1,7 @@
 import { BriefcaseIcon, HandshakeIcon, TargetIcon, MapPinIcon, ClockIcon, CoinsIcon, StudentIcon, CaretRightIcon } from "@phosphor-icons/react";
 import "./Home.css"
 import Usp from "../../components/ups/Usp";
+import Button from "../../components/button/Button";
 
 function Home() {
     return (<main>
@@ -39,10 +40,11 @@ function Home() {
                         </div>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?...</p>
-                    <button ><CaretRightIcon size={15} color="var(--white-color)" weight="bold"/></button>
+                    
+                    <Button className="icon-button" text={<CaretRightIcon size={15} color="var(--white-color)" weight="bold"/>} />
                 </article>
             </div>
-            <button className="assignments-button">Bekijk alle opdrachen</button>
+            <Button className="text-button" text="Bekijk alle opdrachen"/>
         </section>
     </main>
     )
