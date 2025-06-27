@@ -17,32 +17,32 @@ function Home() {
         </section>
         <section className="assignments">
             <h2>Interim opdrachten</h2>
-            <div>
-                <article>
+            <div className="assignment-block">
+                <article className="assignment">
                     <h3>Interim manager</h3>
-                    <div>
-                        <div>
+                    <div className="highlights">
+                        <div className="highlight place">
                             <MapPinIcon size={20} color="var(--red-color)" />
                             <h4>Arnhem</h4>
                         </div>
-                        <div>
+                        <div className="highlight hours">
                             <ClockIcon size={20} color="var(--blue-color)" />
                             <h4>32-26 uur</h4>
                         </div>
-                        <div>
+                        <div className="highlight salary">
                             <CoinsIcon size={20} color="var(--black-color)" />
                             <h4>75-90 per uur</h4>
                         </div>
-                        <div>
+                        <div className="highlight education">
                             <StudentIcon size={20} color="var(--purple-color)" />
                             <h4>Hbo niveau</h4>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt? Sit consequatur quo, expedita minus accusamus eos dolore.</p>
-                    <button><CaretRightIcon size={20} color="var(--white-color)" /></button>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?...</p>
+                    <button ><CaretRightIcon size={15} color="var(--white-color)" weight="bold"/></button>
                 </article>
             </div>
-            <button>Bekijk alle opdrachen</button>
+            <button className="assignments-button">Bekijk alle opdrachen</button>
         </section>
     </main>
     )

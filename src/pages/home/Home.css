@@ -35,3 +35,52 @@
     height: 500px;
     margin: 50px 0;
 }
+
+/*-----ASSIGNMENTS-SECTION-----*/
+.assignment-block{
+    display: flex;
+    width: 100%;
+}
+
+.assignment{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 310px;
+    height: 350px;
+    background-color: var(--grey-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.highlights{
+    width: 100%;
+}
+
+.highlight{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.assignment button{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+.assignment button{
+    background-color: var(--blue-color);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+
+.assignments-button{
+    background-color: var(--purple-color);
+    padding: 15px 35px;
+    border-radius: 25px;
+}
