@@ -2,6 +2,7 @@ import { BriefcaseIcon, HandshakeIcon, TargetIcon, MapPinIcon, ClockIcon, CoinsI
 import "./Home.css"
 import Usp from "../../components/ups/Usp";
 import Button from "../../components/button/Button";
+import Assignment from "../../components/assignment/Assignment";
 
 function Home() {
     return (<main>
@@ -19,32 +20,9 @@ function Home() {
         <section className="assignments">
             <h2>Interim opdrachten</h2>
             <div className="assignment-block">
-                <article className="assignment">
-                    <h3>Interim manager</h3>
-                    <div className="highlights">
-                        <div className="highlight place">
-                            <MapPinIcon size={20} color="var(--red-color)" />
-                            <h4>Arnhem</h4>
-                        </div>
-                        <div className="highlight hours">
-                            <ClockIcon size={20} color="var(--blue-color)" />
-                            <h4>32-26 uur</h4>
-                        </div>
-                        <div className="highlight salary">
-                            <CoinsIcon size={20} color="var(--black-color)" />
-                            <h4>75-90 per uur</h4>
-                        </div>
-                        <div className="highlight education">
-                            <StudentIcon size={20} color="var(--purple-color)" />
-                            <h4>Hbo niveau</h4>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?...</p>
-                    
-                    <Button className="icon-button" text={<CaretRightIcon size={15} color="var(--white-color)" weight="bold"/>} />
-                </article>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26 uur" salary="75-90 per uur" education="Hbo niveau" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
             </div>
-            <Button className="text-button" text="Bekijk alle opdrachen"/>
+            <Button className="text-button" text="Bekijk alle opdrachen" />
         </section>
     </main>
     )
