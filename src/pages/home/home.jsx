@@ -1,4 +1,4 @@
-import { BriefcaseIcon, HandshakeIcon, TargetIcon } from "@phosphor-icons/react";
+import { BriefcaseIcon, HandshakeIcon, TargetIcon, MapPinIcon, ClockIcon, CoinsIcon, StudentIcon, CaretRightIcon } from "@phosphor-icons/react";
 import "./Home.css"
 import Usp from "../../components/ups/Usp";
 
@@ -14,7 +14,35 @@ function Home(){
             <Usp icon={<HandshakeIcon size={26}/>} title="Persoonlijk" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt iste beatae est quam odio dolorum quasi, eveniet saepe nemo cumque voluptas, consequatur eligendi" classname="usp usp2"/>
             <Usp icon={<BriefcaseIcon size={26}/>} title="Professioneel" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt iste beatae est quam odio dolorum quasi, eveniet saepe nemo cumque voluptas, consequatur eligendi" classname="usp usp3"/>
         </div>
-
+    </section>
+    <section className="assignments">
+        <h2>Interim opdrachten</h2>
+        <div>
+            <article>
+                <h3>Interim manager</h3>
+                <div>
+                <div>
+                <MapPinIcon size={20} color="var(--red-color)" />
+                <h4>Arnhem</h4>
+                </div>
+                <div>
+                <ClockIcon size={20} color="var(--blue-color)" />
+                <h4>32-26 uur</h4>
+                </div>
+                <div>
+                <CoinsIcon size={20} color="var(--black-color)" />
+                <h4>75-90 per uur</h4>
+                </div>
+                <div>
+                <StudentIcon size={20} color="var(--purple-color)" />
+                <h4>Hbo niveau</h4>
+                </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt? Sit consequatur quo, expedita minus accusamus eos dolore.</p>
+         <button><CaretRightIcon size={20} color="var(--white-color)"/></button>
+            </article>
+            </div>
+        <button>Bekijk alle opdrachen</button>
     </section>
     </main>
     )
