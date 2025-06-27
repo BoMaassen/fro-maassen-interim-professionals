@@ -20,7 +20,9 @@ function Home() {
         <section className="assignments">
             <h2>Interim opdrachten</h2>
             <div className="assignment-block">
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26 uur" salary="75-90 per uur" education="Hbo niveau" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
             </div>
             <Button className="text-button" text="Bekijk alle opdrachen" />
         </section>

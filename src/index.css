@@ -18,7 +18,7 @@
 /*-----MAIN-----*/
 
 main {
-  margin: 0 242px;
+  margin: 0 223px;
 }
 
 /*-----FONTS-----*/
@@ -74,12 +74,3 @@ ul {
   list-style-type: none;
 }
 
-/*-----BUTTON-----*/
-button {
-  border: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: var(--white-color);
-}

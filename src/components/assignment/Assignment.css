@@ -1,9 +1,10 @@
-.assignment-block{
+.assignment-block {
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.assignment{
+.assignment {
     display: flex;
     flex-direction: column;
     flex-basis: 310px;
@@ -16,18 +17,18 @@
     position: relative;
 }
 
-.highlights{
+.highlights {
     width: 100%;
 }
 
-.highlight{
+.highlight {
     display: flex;
     flex-direction: row;
     gap: 5px;
     padding: 5px 0;
 }
 
-.assignment button{
+.assignment button {
     position: absolute;
     right: 25px;
     bottom: 25px;
