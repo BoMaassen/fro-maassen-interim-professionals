@@ -91,3 +91,10 @@ ul {
   list-style-type: none;
 }
 
+li {
+  font-family: 'TheSans', sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 10px;
+}
+

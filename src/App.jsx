@@ -36,12 +36,14 @@ function App() {
         <Route path='/opdrachten' element={<Assignments/>}/>
       </Routes>
       <footer>
-       <span><img src={logoMip} alt="Logo Maassen interim professionals"/></span>
+       <span className="footer-logo"><img src={logoMip} alt="Logo Maassen interim professionals"/></span>
        <div>
         <h4><Link to="/">Maassen interim professionals</Link></h4>
-        <p>Kvk 123456789</p>
-        <p>Molenhoekplein 43</p>
-        <p>6675BZ Valburg</p>
+        <ul>
+        <li>Kvk 123456789</li>
+        <li>Molenhoekplein 43</li>
+        <li>6675BZ Valburg</li>
+        </ul>
        </div>
        <div>
         <h4><Link to="/over-ons">Over ons</Link></h4>
@@ -62,10 +64,11 @@ function App() {
         <h4><Link to="/contact">Contact</Link></h4>
         <ul>
         <li>06-41000136</li>
-        <li>info@maasseninterimprofessionals.nl</li>
+        <li>info@maasseninterim<br></br>professionals.nl</li>
         </ul>
        </div>
       </footer>
+      <div className="footnote"><p>@2025 - Maassen interim professionals</p></div>
     </>
   )
 }
