@@ -9,13 +9,15 @@ button {
 }
 
 .text-button {
-    background-color: var(--purple-color);
-    padding: 15px 35px;
+    padding: 12px 35px;
     border-radius: 25px;
 }
 
+.equal{
+    flex: 1;
+}
+
 .icon-button {
-    background-color: var(--blue-color);
     width: 26px;
     height: 26px;
     border-radius: 50%;

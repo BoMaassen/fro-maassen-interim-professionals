@@ -15,10 +15,27 @@
   --grey-color: #0000001A;
 }
 
+.purple{
+  background-color: var(--purple-color);
+}
+.blue{
+  background-color: var(--blue-color);
+}
+.red{
+  background-color: var(--red-color);
+}
+.white{
+  background-color: var(--white-color);
+}
+.black{
+  background-color: var(--black-color);
+}
+
 /*-----MAIN-----*/
 
 main {
-  margin: 0 223px;
+  width: 954px;
+  margin: auto;
 }
 
 /*-----FONTS-----*/

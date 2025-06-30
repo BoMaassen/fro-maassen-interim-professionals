@@ -2,7 +2,7 @@ import "./Assignment.css"
 import Button from "../button/Button";
 import {MapPinIcon, ClockIcon, CoinsIcon, StudentIcon, CaretRightIcon } from "@phosphor-icons/react";
 
-function Assignment({place, hours, salary, education, text, title}){
+function Assignment({place, hours, salary, education, text, title, buttoncolor}){
     return(
         <article className="assignment">
                     <h3>{title}</h3>
@@ -25,7 +25,7 @@ function Assignment({place, hours, salary, education, text, title}){
                         </div>
                     </div>
                     <p>{text}</p>
-                    <Button className="icon-button" text={<CaretRightIcon size={15} color="var(--white-color)" weight="bold" />} />
+                    <Button className={`icon-button ${buttoncolor}`} text={<CaretRightIcon size={15} color="var(--white-color)" weight="bold" />} />
                 </article>
     );
 }

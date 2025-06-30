@@ -20,11 +20,18 @@ function Home() {
         <section className="assignments">
             <h2>Interim opdrachten</h2>
             <div className="assignment-block">
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" buttoncolor="blue" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" buttoncolor="black" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
+                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" buttoncolor="purple" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
             </div>
-            <Button className="text-button" text="Bekijk alle opdrachen" />
+            <Button className="text-button purple" text="Bekijk alle opdrachen" />
+        </section>
+        <section className="contact">
+            <h2>Contact ons</h2>
+            <div className="contact-buttons">
+                <Button className="phone-number text-button blue equal" text="06-41000136"></Button>
+                <Button className="contact-button text-button purple equal" text="Contact"></Button>
+            </div>
         </section>
     </main>
     )
