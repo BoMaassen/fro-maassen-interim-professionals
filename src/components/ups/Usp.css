@@ -1,0 +1,17 @@
+.usp div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.usp1 h3{
+    color: var(--red-color);
+}
+
+.usp2 h3{
+    color: var(--purple-color);
+}
+
+.usp3 h3{
+    color: var(--blue-color);
+}

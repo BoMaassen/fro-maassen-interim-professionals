@@ -1,0 +1,36 @@
+.assignment-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.assignment {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 310px;
+    height: 350px;
+    background-color: var(--grey-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.highlights {
+    width: 100%;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.assignment button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}

@@ -1,0 +1,57 @@
+/*-----INTRODUCTION-SECTION-----*/
+.introduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    margin: 50px 0;
+    gap: 121px;
+}
+
+/*-----INTRODUCTION-TEKST-----*/
+.intro-tekst{
+    flex: 2;
+}
+
+.intro-tekst h2{
+    margin-bottom: 15px;
+}
+/*-----INTRODUCTION-USPS-----*/
+.usps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    flex: 3;
+}
+
+/*-----ASSIGNMENTS-SECTION-----*/
+.assignments{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    margin: 50px 0;
+}
+
+/*-----CONTACT-SECTION-----*/
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 215px;
+    margin: 50px 0;
+}
+
+.contact-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 325px;
+    gap: 10px;
+}
+
+
