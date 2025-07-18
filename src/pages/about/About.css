@@ -1,12 +1,12 @@
 /*-----ABOUT-US-SECTION-----*/
-.about-us{
+.about-us, .about-work{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 460px;
+    height: 400px;
     margin: 41px 0;
-    gap: 121px;
+    gap: 50px;
 }
 
 /*-----ABOUT-IMG-----*/
@@ -20,14 +20,30 @@
   }
 
   /*-----ABOUT-TEXT-----*/
-.about-text{
+.about-text, .about-work-text{
     flex: 3.5;
-    background-color: var(--purple-color);
     color: var(--white-color);
     padding: 25px 29px;
     border-radius: 20px;
+    height: 350px;
 }
 
-.about-text p {
+.about-work-text{
+    background-color: var(--blue-color);
+}
+
+.about-text{
+    background-color: var(--purple-color);
+}
+
+.about-text p, .about-work-text p {
     margin-top: 12px;
+}
+
+.about-usps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    flex: 4.5;
 }
