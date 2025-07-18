@@ -1,0 +1,33 @@
+/*-----ABOUT-US-SECTION-----*/
+.about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 460px;
+    margin: 41px 0;
+    gap: 121px;
+}
+
+/*-----ABOUT-IMG-----*/
+.about-us span{
+    display: flex; 
+    flex: 4.5;
+  }
+
+  .about-us img {
+      width: 100%;
+  }
+
+  /*-----ABOUT-TEXT-----*/
+.about-text{
+    flex: 3.5;
+    background-color: var(--purple-color);
+    color: var(--white-color);
+    padding: 25px 29px;
+    border-radius: 20px;
+}
+
+.about-text p {
+    margin-top: 12px;
+}
