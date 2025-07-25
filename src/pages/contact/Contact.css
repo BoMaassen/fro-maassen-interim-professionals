@@ -1,0 +1,36 @@
+/*-----CONTACT-SECTION-----*/
+.contact-section{
+    margin: 50px 0;
+}
+/*-----CONTACT-CARD-----*/
+.contact-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card span{
+    display: flex;   
+    width: 300px; 
+}
+.contact-card img{
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--blue-color);
+    border-radius: 0 0 20px 20px;
+    width: 300px; 
+    height: 104px;
+    color: var(--white-color);
+    padding: 10px;
+}
+
+.contact-info div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
