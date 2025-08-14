@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import Button from '../../components/button/Button';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useRef } from 'react';
+import Input from '../../components/input/input';
 
 
 function Contact() {
@@ -41,47 +42,30 @@ function Contact() {
             <form onSubmit={handleSubmit(handleFormSubmit)}>
             <h2>Neem contact op</h2>
                 <div className='name-form'>
-                <label htmlFor='firstName'>
-                    <input type='text' id='firstName' placeholder='Voornaam' {...register("firstName", {
-                        required: {
+                    <Input inputType="text" inputName="firstname" placeholder="Voornaam" register={register} error={errors}
+                    validationRules={{required: {
                             value: true,
                             message: "Voornaam is verplicht",
-                        }
-                    })} />
-                    {errors.firstName && <p>{errors.firstName.message}</p>}
-                </label>
-                <label htmlFor='lastName'>
-                    <input type='text' id='lastName' placeholder='Achternaam' {...register("lastName", {
-                        required: {
+                        }}} />
+                    <Input inputType="text" inputName="lastname" placeholder="Achternaam" register={register} error={errors}
+                    validationRules={{required: {
                             value: true,
                             message: "Achternaam is verplicht",
-                        }
-                    })} />
-                    {errors.lastName && <p>{errors.lastName.message}</p>}
-                </label>
+                        }}} />
                 </div>
                 <div className='contacts-form'>
-                <label htmlFor='email'>
-                    <input type='email' id='email' placeholder='Email' {...register("email", {
-                        required: {
+                <Input inputType="text" inputName="email" placeholder="Email" register={register} error={errors}
+                    validationRules={{required: {
                             value: true,
                             message: "Email is verplicht",
-                        }
-                    })} />
-                    {errors.email && <p>{errors.email.message}</p>}
-                </label>
-                <label htmlFor='tel'>
-                    <input type='number' id='tel' placeholder='Telefoonnummer' {...register("tel", {
-                        required: {
+                        }}} />
+                <Input inputType="text" inputName="tel" placeholder="Telefoonnummer" register={register} error={errors}
+                    validationRules={{required: {
                             value: true,
                             message: "Telefoonnummer is verplicht",
-                        }
-                    })} />
-                    {errors.tel && <p>{errors.tel.message}</p>}
-                </label>
+                        }}} />
                 </div>
                 <label htmlFor='message'>
-                    
                     <textarea id='message' placeholder='Bericht' {...register("message")} />
                 </label>
                 <ReCAPTCHA
