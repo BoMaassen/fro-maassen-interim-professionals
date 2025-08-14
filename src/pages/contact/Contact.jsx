@@ -3,13 +3,23 @@ import { PhoneIcon, EnvelopeIcon } from "@phosphor-icons/react";
 import fotoFrank from "../../assets/Frank.jpeg";
 import { useForm } from 'react-hook-form';
 import Button from '../../components/button/Button';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useRef } from 'react';
+
 
 function Contact() {
     const { register, handleSubmit, formState: { errors } } = useForm();
-
+    const recaptchaRef = useRef();
     function handleFormSubmit(data) {
+        recaptchaRef.current.execute();
         console.log(data);
     }
+
+    function onReCAPTCHAChange(token) {
+        if (!token) return; // gebruiker heeft reCAPTCHA niet voltooid
+        // Hier kun je nu echt de data versturen
+        console.log("Formulier verzonden met token:", token);
+      }
 
     return (<main>
         <section className='contact-section'>
@@ -27,52 +37,60 @@ function Contact() {
                     </div>
                 </div>
             </div>
+          
             <form onSubmit={handleSubmit(handleFormSubmit)}>
+            <h2>Neem contact op</h2>
+                <div className='name-form'>
                 <label htmlFor='firstName'>
-                    Voornaam
-                    <input type='text' id='firstName' {...register("firstName", {
+                    <input type='text' id='firstName' placeholder='Voornaam' {...register("firstName", {
                         required: {
                             value: true,
-                            message: "Dit veld is verplicht",
+                            message: "Voornaam is verplicht",
                         }
                     })} />
                     {errors.firstName && <p>{errors.firstName.message}</p>}
                 </label>
                 <label htmlFor='lastName'>
-                    Achternaam
-                    <input type='text' id='lastName' {...register("lastName", {
+                    <input type='text' id='lastName' placeholder='Achternaam' {...register("lastName", {
                         required: {
                             value: true,
-                            message: "Dit veld is verplicht",
+                            message: "Achternaam is verplicht",
                         }
                     })} />
                     {errors.lastName && <p>{errors.lastName.message}</p>}
                 </label>
+                </div>
+                <div className='contacts-form'>
                 <label htmlFor='email'>
-                    Email
-                    <input type='email' id='email' {...register("email", {
+                    <input type='email' id='email' placeholder='Email' {...register("email", {
                         required: {
                             value: true,
-                            message: "Dit veld is verplicht",
+                            message: "Email is verplicht",
                         }
                     })} />
                     {errors.email && <p>{errors.email.message}</p>}
                 </label>
                 <label htmlFor='tel'>
-                    Telefoonnummer
-                    <input type='number' id='tel' {...register("tel", {
+                    <input type='number' id='tel' placeholder='Telefoonnummer' {...register("tel", {
                         required: {
                             value: true,
-                            message: "Dit veld is verplicht",
+                            message: "Telefoonnummer is verplicht",
                         }
                     })} />
                     {errors.tel && <p>{errors.tel.message}</p>}
                 </label>
+                </div>
                 <label htmlFor='message'>
-                    Bericht
-                    <textarea id='message' {...register("message")} />
+                    
+                    <textarea id='message' placeholder='Bericht' {...register("message")} />
                 </label>
-                <Button text="versturen" type="submit" />
+                <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // test key
+        size="invisible"
+        onChange={onReCAPTCHAChange}
+      />
+                <Button className="text-button purple" text="versturen" type="submit"/>
             </form>
         </section>
 
