@@ -3,6 +3,7 @@ import "./Home.css"
 import Usp from "../../components/ups/Usp";
 import Button from "../../components/button/Button";
 import Assignment from "../../components/assignment/Assignment";
+import assingments from "../../../src/assignments.json"
 
 function Home() {
     return (<main>
@@ -20,10 +21,21 @@ function Home() {
         <section className="assignments">
             <h2>Interim opdrachten</h2>
             <div className="assignment-block">
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" buttoncolor="blue" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" buttoncolor="black" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
-                <Assignment title="Interim manager" place="Arnhem" hours="32-26" salary="75-90" education="Hbo" buttoncolor="purple" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam rem, accusantium qui sunt illo blanditiis suscipit similique quo eveniet laboriosam incidunt?..."/>
-            </div>
+  {assingments
+    .filter((assignment) => assignment.highlight === true)
+    .map((assignment) => (
+      <Assignment
+        key={assignment.id} 
+        title={assignment.title}
+        place={assignment.place}
+        hours={assignment.hours}
+        salary={assignment.salary}
+        education={assignment.education}
+        buttoncolor={assignment.buttoncolor}
+        text={assignment.text}
+      />
+    ))}
+</div>
             <Button className="text-button purple" text="Bekijk alle opdrachen" />
         </section>
         <section className="contact">

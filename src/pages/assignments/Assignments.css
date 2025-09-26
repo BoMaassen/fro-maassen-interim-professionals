@@ -1,0 +1,26 @@
+.assignments-section{
+    display: flex;
+    gap: 10px;
+    margin: 50px 0;
+}
+
+.filter{
+    flex: 2;
+}
+
+.filtermenu{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 20px;
+    width: 281px;
+    height: 548px;
+    padding: 20px;
+}
+
+.assignments-div{
+    display: flex;
+    justify-content: center;
+    flex: 5;
+    flex-wrap: wrap;
+    gap: 14px;
+}

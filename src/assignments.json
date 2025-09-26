@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "Interim manager",
+    "place": "Arnhem",
+    "hours": "32-36",
+    "salary": "75-90",
+    "education": "Hbo",
+    "buttoncolor": "blue",
+    "text": "Leidt tijdelijk een organisatie door een verandertraject.",
+    "highlight": true
+  },
+  {
+    "id": 2,
+    "title": "Software Developer",
+    "place": "Utrecht",
+    "hours": "40",
+    "salary": "55-70",
+    "education": "Hbo",
+    "buttoncolor": "purple",
+    "text": "Ontwikkel en onderhoud moderne webapplicaties in een agile team.",
+    "highlight": true
+  },
+  {
+    "id": 3,
+    "title": "Marketing Specialist",
+    "place": "Rotterdam",
+    "hours": "32",
+    "salary": "45-60",
+    "education": "Hbo",
+    "buttoncolor": "purple",
+    "text": "Creëer campagnes en vergroot het online bereik van het merk.",
+    "highlight": true
+  },
+  {
+    "id": 4,
+    "title": "Data Analyst",
+    "place": "Amsterdam",
+    "hours": "36-40",
+    "salary": "60-80",
+    "education": "Wo",
+    "buttoncolor": "red",
+    "text": "Analyseer grote datasets en geef inzichten voor strategische keuzes.",
+    "highlight": false
+  },
+  {
+    "id": 5,
+    "title": "Projectleider Bouw",
+    "place": "Eindhoven",
+    "hours": "40",
+    "salary": "70-95",
+    "education": "Hbo",
+    "buttoncolor": "red",
+    "text": "Verantwoordelijk voor planning en uitvoering van bouwprojecten.",
+    "highlight": false
+  },
+  {
+    "id": 6,
+    "title": "Verpleegkundige",
+    "place": "Nijmegen",
+    "hours": "24-32",
+    "salary": "35-50",
+    "education": "Mbo",
+    "buttoncolor": "blue",
+    "text": "Bied dagelijkse zorg en begeleiding aan patiënten.",
+    "highlight": false
+  },
+  {
+    "id": 7,
+    "title": "Accountmanager B2B",
+    "place": "Zwolle",
+    "hours": "36-40",
+    "salary": "50-75",
+    "education": "Hbo",
+    "buttoncolor": "black",
+    "text": "Onderhoud klantrelaties en genereer nieuwe business.",
+    "highlight": false
+  },
+  {
+    "id": 8,
+    "title": "Docent Engels",
+    "place": "Leiden",
+    "hours": "28-36",
+    "salary": "40-55",
+    "education": "Hbo",
+    "buttoncolor": "purple",
+    "text": "Geef lessen Engels aan middelbare scholieren.",
+    "highlight": false
+  },
+  {
+    "id": 9,
+    "title": "UX Designer",
+    "place": "Haarlem",
+    "hours": "32-40",
+    "salary": "55-70",
+    "education": "Hbo",
+    "buttoncolor": "blue",
+    "text": "Ontwerp gebruiksvriendelijke interfaces en test met gebruikers.",
+    "highlight": false
+  },
+  {
+    "id": 10,
+    "title": "Logistiek Planner",
+    "place": "Tilburg",
+    "hours": "40",
+    "salary": "45-65",
+    "education": "Mbo",
+    "buttoncolor": "red",
+    "text": "Plan en optimaliseer transport- en magazijnstromen.",
+    "highlight": false
+  },
+  {
+    "id": 11,
+    "title": "Business Consultant",
+    "place": "Amersfoort",
+    "hours": "36-40",
+    "salary": "65-85",
+    "education": "Wo",
+    "buttoncolor": "blue",
+    "text": "Adviseer organisaties over strategie en digitalisering.",
+    "highlight": false
+  },
+  {
+    "id": 12,
+    "title": "Grafisch Ontwerper",
+    "place": "Groningen",
+    "hours": "24-32",
+    "salary": "35-50",
+    "education": "Hbo",
+    "buttoncolor": "purple",
+    "text": "Ontwerp creatieve visuele concepten en huisstijlen.",
+    "highlight": false
+  },
+  {
+    "id": 13,
+    "title": "HR Adviseur",
+    "place": "Den Haag",
+    "hours": "32-36",
+    "salary": "50-70",
+    "education": "Hbo",
+    "buttoncolor": "purple",
+    "text": "Begeleid HR-processen en adviseer leidinggevenden.",
+    "highlight": false
+  },
+  {
+    "id": 14,
+    "title": "Financieel Controller",
+    "place": "Breda",
+    "hours": "40",
+    "salary": "65-90",
+    "education": "Wo",
+    "buttoncolor": "black",
+    "text": "Controleer financiële rapportages en bewaak budgetten.",
+    "highlight": false
+  },
+  {
+    "id": 15,
+    "title": "IT Support Engineer",
+    "place": "Almere",
+    "hours": "36-40",
+    "salary": "40-55",
+    "education": "Mbo",
+    "buttoncolor": "red",
+    "text": "Bied technische ondersteuning en los incidenten op.",
+    "highlight": false
+  },
+  {
+    "id": 16,
+    "title": "Product Owner",
+    "place": "Den Bosch",
+    "hours": "36-40",
+    "salary": "70-95",
+    "education": "Hbo",
+    "buttoncolor": "blue",
+    "text": "Stel prioriteiten voor het scrumteam en beheer de product backlog.",
+    "highlight": false
+  },
+  {
+    "id": 17,
+    "title": "Verkoper Retail",
+    "place": "Maastricht",
+    "hours": "20-32",
+    "salary": "25-40",
+    "education": "Mbo",
+    "buttoncolor": "blue",
+    "text": "Help klanten in de winkel en zorg voor een prettige ervaring.",
+    "highlight": false
+  },
+  {
+    "id": 18,
+    "title": "Operationeel Manager",
+    "place": "Apeldoorn",
+    "hours": "40",
+    "salary": "75-100",
+    "education": "Hbo",
+    "buttoncolor": "purple",
+    "text": "Leid de dagelijkse operatie en verbeter processen.",
+    "highlight": false
+  },
+  {
+    "id": 19,
+    "title": "Content Marketeer",
+    "place": "Delft",
+    "hours": "28-36",
+    "salary": "45-60",
+    "education": "Hbo",
+    "buttoncolor": "black",
+    "text": "Schrijf en beheer content voor websites en campagnes.",
+    "highlight": false
+  },
+  {
+    "id": 20,
+    "title": "Research Scientist",
+    "place": "Wageningen",
+    "hours": "36-40",
+    "salary": "80-110",
+    "education": "Wo",
+    "buttoncolor": "red",
+    "text": "Doe onderzoek en ontwikkel innovatieve oplossingen.",
+    "highlight": false
+  }
+]

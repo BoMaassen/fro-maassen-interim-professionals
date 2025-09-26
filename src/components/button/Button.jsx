@@ -1,8 +1,8 @@
 import "./Button.css";
 
-function Button({ className, text }) {
+function Button({ className, text, type }) {
     return (
-        <button className={className}>{text}</button>
+        <button className={className} type={type} >{text}</button>
     );
 }
 
