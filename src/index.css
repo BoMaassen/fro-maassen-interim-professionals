@@ -15,6 +15,12 @@
   --grey-color: #0000001A;
 }
 
+.root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .purple{
   background-color: var(--purple-color);
 }
@@ -31,8 +37,12 @@
   background-color: var(--black-color);
 }
 
-/*-----MAIN-----*/
+/*-----BODY-----*/
+body{
+  height: 100vh;
+}
 
+/*-----MAIN-----*/
 main {
   width: 954px;
   margin: auto;

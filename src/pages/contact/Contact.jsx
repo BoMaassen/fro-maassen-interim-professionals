@@ -68,16 +68,12 @@ function Contact() {
                 <label htmlFor='message'>
                     <textarea id='message' placeholder='Bericht' {...register("message")} />
                 </label>
-                <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // test key
-        size="invisible"
-        onChange={onReCAPTCHAChange}
-      />
+             <ReCAPTCHA ref={recaptchaRef} size="invisible" onChange={onReCAPTCHAChange}
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // test key
+                />
                 <Button className="text-button purple" text="versturen" type="submit"/>
             </form>
         </section>
-
     </main>
     )
 }

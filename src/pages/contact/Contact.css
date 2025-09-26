@@ -43,8 +43,6 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
-    
 }
 
 .name-form, .contacts-form{
@@ -54,18 +52,14 @@ form{
     justify-content: space-between;
 }
 
-input, textarea{
+textarea{
     border-radius: 20px;
     border: none;
     background-color: var(--grey-color);
     padding: 15px;
 }
 
-input{
-    width: 223px;
-}
-
-input::placeholder, textarea::placeholder{
+textarea::placeholder{
     color: var(--white-color);
 }
 

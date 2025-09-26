@@ -35,6 +35,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/opdrachten' element={<Assignments/>}/>
       </Routes>
+      <div>
       <footer>
        <span className="footer-logo"><img src={logoMip} alt="Logo Maassen interim professionals"/></span>
        <div>
@@ -69,6 +70,7 @@ function App() {
        </div>
       </footer>
       <div className="footnote"><p>@2025 - Maassen interim professionals</p></div>
+      </div>
     </>
   )
 }
