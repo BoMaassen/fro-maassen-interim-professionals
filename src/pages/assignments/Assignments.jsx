@@ -3,6 +3,7 @@ import Assignment from "../../components/assignment/Assignment";
 import assignments from "../../../src/assignments.json"
 import { useState } from 'react';
 import RemoveDuplicatedAndSort from '../../helpers/RemoveDuplicatedAndSort';
+import { CaretDownIcon, CaretUpIcon } from "@phosphor-icons/react";
 
 function Assignments() {
     const [filteredPlace, setFilteredPlace] = useState([]);
@@ -30,7 +31,7 @@ function Assignments() {
                     <details>
                         <summary>Plaats</summary>
                         <ul>
-                            {RemoveDuplicatedAndSort(filteredAssignments.map((assignment) => assignment.place)).map((place) =>(
+                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.place)).map((place) =>(
                             <li key={place} onClick={() => setFilteredPlace(prevItems => [...prevItems, place])}>{place}</li>
                             ))}      
                         </ul>
@@ -38,7 +39,7 @@ function Assignments() {
                     <details>
                         <summary>Uren</summary>
                         <ul>
-                            {RemoveDuplicatedAndSort(filteredAssignments.map((assignment) => assignment.hours)).map((hour) =>(
+                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.hours)).map((hour) =>(
                             <li key={hour} onClick={() => setFilteredHours(prevItems => [...prevItems, hour])}>{hour}</li>
                             ))}  
                         </ul>
@@ -46,7 +47,7 @@ function Assignments() {
                     <details>
                         <summary>Opleidingsniveau</summary>
                         <ul>
-                            {RemoveDuplicatedAndSort(filteredAssignments.map((assignment) => assignment.education)).map((education) =>(
+                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.education)).map((education) =>(
                             <li key={education} onClick={() => setFilteredEducation(prevItems => [...prevItems, education])}>{education}</li>
                             ))}  
                         </ul>
