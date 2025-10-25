@@ -2,13 +2,10 @@ import './Assignments.css'
 import Assignment from "../../components/assignment/Assignment";
 import assignments from "../../../src/assignments.json"
 import { useState } from 'react';
+import RemoveDuplicatedAndSort from '../../helpers/RemoveDuplicatedAndSort';
 
 function Assignments() {
-    const places = assignments.map((assignment) =>  assignment.place);
-    const uniquePlaces = places.filter((place, id, array) => array.indexOf(place) == id);
-    const sortedPlaces = uniquePlaces.sort((a, b) => a.localeCompare(b));
-    console.log(sortedPlaces);
-
+    
     return (<main>
         <section className='assignments-section'>
             <div className='filter'>
@@ -17,7 +14,7 @@ function Assignments() {
                     <details>
                         <summary>Plaats</summary>
                         <ul>
-                            {sortedPlaces.map((place) =>(
+                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.place)).map((place) =>(
                             <li key={place}>{place}</li>
                             ))}      
                         </ul>
@@ -25,13 +22,17 @@ function Assignments() {
                     <details>
                         <summary>Uren</summary>
                         <ul>
-                            
+                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.hours)).map((hour) =>(
+                            <li key={hour}>{hour}</li>
+                            ))}  
                         </ul>
                     </details>
                     <details>
                         <summary>Opleidingsniveau</summary>
                         <ul>
-                            
+                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.education)).map((education) =>(
+                            <li key={education}>{education}</li>
+                            ))}  
                         </ul>
                     </details>
                 </div>
