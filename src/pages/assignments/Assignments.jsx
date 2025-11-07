@@ -35,8 +35,8 @@ function Assignments() {
                             {RemoveDuplicatedAndSort(
                                 assignments
                                     .filter((assignment) => {
-                                        return filteredHours.length === 0 || filteredHours.includes(assignment.hours) &&
-                                            filteredEducation.length === 0 || filteredEducation.includes(assignment.education);
+                                        return (filteredHours.length === 0 || filteredHours.includes(assignment.hours)) &&
+                                            (filteredEducation.length === 0 || filteredEducation.includes(assignment.education));
                                     })
                                     .map((assignment) => assignment.place)).map((place) => (
                                         <li key={place} onClick={() => setFilteredPlace((prevItems) => prevItems.includes(place)
@@ -53,8 +53,8 @@ function Assignments() {
                             {RemoveDuplicatedAndSort(
                                 assignments
                                     .filter((assignment) => {
-                                        return filteredPlace.length === 0 || filteredPlace.includes(assignment.place) &&
-                                            filteredEducation.length === 0 || filteredEducation.includes(assignment.education);
+                                        return (filteredPlace.length === 0 || filteredPlace.includes(assignment.place)) &&
+                                            (filteredEducation.length === 0 || filteredEducation.includes(assignment.education));
                                     })
                                     .map((assignment) => assignment.hours)).map((hour) => (
                                         <li key={hour} onClick={() => setFilteredHours((prevItems) => prevItems.includes(hour)
@@ -71,8 +71,8 @@ function Assignments() {
                             {RemoveDuplicatedAndSort(
                                 assignments
                                     .filter((assignment) => {
-                                        return filteredHours.length === 0 || filteredHours.includes(assignment.hours) &&
-                                        filteredPlace.length === 0 || filteredPlace.includes(assignment.place);
+                                        return (filteredHours.length === 0 || filteredHours.includes(assignment.hours)) &&
+                                        (filteredPlace.length === 0 || filteredPlace.includes(assignment.place));
                                     })
                                     .map((assignment) => assignment.education)).map((education) => (
                                         <li key={education} onClick={() => setFilteredEducation((prevItems) => prevItems.includes(education)
