@@ -3,12 +3,18 @@ import Assignment from "../../components/assignment/Assignment";
 import assignments from "../../../src/assignments.json"
 import { useState } from 'react';
 import RemoveDuplicatedAndSort from '../../helpers/RemoveDuplicatedAndSort';
-import { CaretDownIcon, CaretUpIcon } from "@phosphor-icons/react";
+import Button from '../../components/button/Button';
+import { XIcon } from "@phosphor-icons/react";
 
 function Assignments() {
     const [filteredPlace, setFilteredPlace] = useState([]);
     const [filteredHours, setFilteredHours] = useState([]);
     const [filteredEducation, setFilteredEducation] = useState([]);
+
+    const filtersActive =
+        filteredPlace.length > 0 ||
+        filteredHours.length > 0 ||
+        filteredEducation.length > 0;
 
     const filteredAssignments = assignments.filter((assignment) => {
         const matchPlace =
@@ -29,6 +35,18 @@ function Assignments() {
             <div className='filter'>
                 <div className='filtermenu'>
                     <h2>Filter</h2>
+                    {filtersActive && (
+                        <Button
+                            className="reset-filter icon-button black"
+                            type="button"
+                            icon={<XIcon size={20} weight="bold" />}
+                            onClick={() => {
+                                setFilteredPlace([]);
+                                setFilteredHours([]);
+                                setFilteredEducation([]);
+                            }}
+                        />
+                    )}
                     <details>
                         <summary>Plaats</summary>
                         <ul>
@@ -64,7 +82,7 @@ function Assignments() {
                                         }
                                         className={isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
-                                        {place} <span style={{ opacity: 0.6 }}>({count})</span>
+                                        {place} <span>({count})</span>
                                     </li>
                                 );
                             })}
@@ -75,18 +93,9 @@ function Assignments() {
                         <ul>
                             {RemoveDuplicatedAndSort(
                                 assignments
-                                    /*.filter(
-                                        (assignment) =>
-                                          filteredHours.includes(assignment.hours) ||
-                                          (
-                                            (filteredPlace.length === 0 || filteredPlace.includes(assignment.place)) &&
-                                            (filteredEducation.length === 0 || filteredEducation.includes(assignment.education))
-                                          )
-                                      )*/
                                     .map((assignment) => assignment.hours)
                             ).map((hour) => {
                                 const isSelected = filteredHours.includes(hour);
-
                                 const count = assignments.filter(
                                     (a) =>
                                         a.hours === hour &&
@@ -106,7 +115,7 @@ function Assignments() {
                                         }
                                         className={isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
-                                        {hour} <span style={{ opacity: 0.6 }}>({count})</span>
+                                        {hour} <span>({count})</span>
                                     </li>
                                 );
                             })}
@@ -117,18 +126,9 @@ function Assignments() {
                         <ul>
                             {RemoveDuplicatedAndSort(
                                 assignments
-                                    /*.filter(
-                                        (assignment) =>
-                                          filteredEducation.includes(assignment.education) ||
-                                          (
-                                            (filteredPlace.length === 0 || filteredPlace.includes(assignment.place)) &&
-                                            (filteredHours.length === 0 || filteredHours.includes(assignment.hours))
-                                          )
-                                      )*/
                                     .map((assignment) => assignment.education)
                             ).map((education) => {
                                 const isSelected = filteredEducation.includes(education);
-
                                 const count = assignments.filter(
                                     (a) =>
                                         a.education === education &&
@@ -148,7 +148,7 @@ function Assignments() {
                                         }
                                         className={isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
-                                        {education} <span style={{ opacity: 0.6 }}>({count})</span>
+                                        {education} <span>({count})</span>
                                     </li>
                                 );
                             })}
@@ -158,7 +158,7 @@ function Assignments() {
             </div>
             <div className='assignments-div'>
                 {filteredAssignments.length === 0 ? (
-                    <h3>Er zijn geen opdrachten gevonden voor deze selectie.</h3>
+                    <h3 className='no-assignments'>Geen opdrachten gevonden voor deze selectie.</h3>
                 ) : (
                     filteredAssignments.map((assignment) => (
                         <Assignment

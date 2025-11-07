@@ -6,6 +6,13 @@
 
 .filter {
     flex: 2;
+    position: relative;
+}
+
+.reset-filter{
+    position: absolute;
+    top: 25px;
+    right: 20px;
 }
 
 .filtermenu {
@@ -30,6 +37,10 @@ details {
     padding: 10px 0;
     margin: 5px 0;
 
+}
+
+details ul{
+    padding-top: 10px;
 }
 
 details li {
@@ -66,8 +77,12 @@ summary::-webkit-details-marker {
     cursor: pointer;
   }
   
-  .filter-item.selected {
+.filter-item.selected {
     font-weight: 600;
     color: var(--black-color);
   }
+
+.no-assignments{
+    margin: 20px 0 0 20px;
+}
   
