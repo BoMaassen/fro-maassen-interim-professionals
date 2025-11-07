@@ -12,17 +12,18 @@ function Assignments() {
 
     const filteredAssignments = assignments.filter((assignment) => {
         const matchPlace =
-          filteredPlace.length === 0 || filteredPlace.includes(assignment.place);
+            filteredPlace.length === 0 || filteredPlace.includes(assignment.place);
 
-        const matchHours = 
-          filteredHours.length === 0 || filteredHours.includes(assignment.hours);
-      
+        const matchHours =
+            filteredHours.length === 0 || filteredHours.includes(assignment.hours);
+
         const matchEducation =
-          filteredEducation.length === 0 || filteredEducation.includes(assignment.education);
-      
+            filteredEducation.length === 0 || filteredEducation.includes(assignment.education);
+
         return matchPlace && matchHours && matchEducation;
-      });
-    
+    });
+
+
     return (<main>
         <section className='assignments-section'>
             <div className='filter'>
@@ -31,25 +32,55 @@ function Assignments() {
                     <details>
                         <summary>Plaats</summary>
                         <ul>
-                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.place)).map((place) =>(
-                            <li key={place} onClick={() => setFilteredPlace(prevItems => [...prevItems, place])}>{place}</li>
-                            ))}      
+                            {RemoveDuplicatedAndSort(
+                                assignments
+                                    .filter((assignment) => {
+                                        return filteredHours.length === 0 || filteredHours.includes(assignment.hours) &&
+                                            filteredEducation.length === 0 || filteredEducation.includes(assignment.education);
+                                    })
+                                    .map((assignment) => assignment.place)).map((place) => (
+                                        <li key={place} onClick={() => setFilteredPlace((prevItems) => prevItems.includes(place)
+                                            ? prevItems.filter((p) => p !== place)
+                                            : [...prevItems, place])}>
+                                            {place}
+                                        </li>
+                                    ))}
                         </ul>
                     </details>
                     <details>
                         <summary>Uren</summary>
                         <ul>
-                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.hours)).map((hour) =>(
-                            <li key={hour} onClick={() => setFilteredHours(prevItems => [...prevItems, hour])}>{hour}</li>
-                            ))}  
+                            {RemoveDuplicatedAndSort(
+                                assignments
+                                    .filter((assignment) => {
+                                        return filteredPlace.length === 0 || filteredPlace.includes(assignment.place) &&
+                                            filteredEducation.length === 0 || filteredEducation.includes(assignment.education);
+                                    })
+                                    .map((assignment) => assignment.hours)).map((hour) => (
+                                        <li key={hour} onClick={() => setFilteredHours((prevItems) => prevItems.includes(hour)
+                                            ? prevItems.filter((h) => h !== hour)
+                                            : [...prevItems, hour])}>
+                                            {hour}
+                                        </li>
+                                    ))}
                         </ul>
                     </details>
                     <details>
                         <summary>Opleidingsniveau</summary>
                         <ul>
-                            {RemoveDuplicatedAndSort(assignments.map((assignment) => assignment.education)).map((education) =>(
-                            <li key={education} onClick={() => setFilteredEducation(prevItems => [...prevItems, education])}>{education}</li>
-                            ))}  
+                            {RemoveDuplicatedAndSort(
+                                assignments
+                                    .filter((assignment) => {
+                                        return filteredHours.length === 0 || filteredHours.includes(assignment.hours) &&
+                                        filteredPlace.length === 0 || filteredPlace.includes(assignment.place);
+                                    })
+                                    .map((assignment) => assignment.education)).map((education) => (
+                                        <li key={education} onClick={() => setFilteredEducation((prevItems) => prevItems.includes(education)
+                                            ? prevItems.filter((e) => e !== education)
+                                            : [...prevItems, education])}>
+                                            {education}
+                                        </li>
+                                    ))}
                         </ul>
                     </details>
                 </div>
