@@ -61,3 +61,13 @@ summary {
 summary::-webkit-details-marker {
     display: none;
 }
+
+.filter-item {
+    cursor: pointer;
+  }
+  
+  .filter-item.selected {
+    font-weight: 600;
+    color: var(--black-color);
+  }
+  
