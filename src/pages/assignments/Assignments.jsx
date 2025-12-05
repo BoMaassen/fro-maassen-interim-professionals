@@ -11,6 +11,7 @@ function Assignments() {
     const [filteredPlace, setFilteredPlace] = useState([]);
     const [filteredHours, setFilteredHours] = useState([]);
     const [filteredEducation, setFilteredEducation] = useState([]);
+    const [openFilter, setOpenFilter] = useState(null);
 
     const filtersActive =
         filteredPlace.length > 0 ||
@@ -47,8 +48,8 @@ function Assignments() {
                             }}
                         />
                     )}
-                    <details>
-                        <summary>Plaats</summary>
+                    <details open={openFilter === "place"}>
+                        <summary onClick={(e) => { e.preventDefault(); setOpenFilter(openFilter === "place" ? null : "place");}}>Plaats</summary>
                         <ul>
                             {RemoveDuplicatedAndSort(
                                 assignments
@@ -66,7 +67,7 @@ function Assignments() {
                                                     : [...prevItems, place]
                                             )
                                         }
-                                        className={isSelected ? 'filter-item selected' : 'filter-item'}
+                                        className={count === 0 ? 'filter-item disabled' : isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
                                         {place} <span>({count})</span>
                                     </li>
@@ -74,8 +75,8 @@ function Assignments() {
                             })}
                         </ul>
                     </details>
-                    <details>
-                        <summary>Uren</summary>
+                    <details open={openFilter === "hours"}>
+                        <summary onClick={(e) => { e.preventDefault(); setOpenFilter(openFilter === "hours" ? null : "hours");}}>Uren</summary>
                         <ul>
                             {RemoveDuplicatedAndSort(
                                 assignments
@@ -93,7 +94,7 @@ function Assignments() {
                                                     : [...prevItems, hour]
                                             )
                                         }
-                                        className={isSelected ? 'filter-item selected' : 'filter-item'}
+                                        className={count === 0 ? 'filter-item disabled' : isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
                                         {hour}<span>({count})</span>
                                     </li>
@@ -101,8 +102,8 @@ function Assignments() {
                             })}
                         </ul>
                     </details>
-                    <details>
-                        <summary>Opleidingsniveau</summary>
+                    <details open={openFilter === "education"}>
+                        <summary onClick={(e) => { e.preventDefault(); setOpenFilter(openFilter === "education" ? null : "education");}}>Opleidingsniveau</summary>
                         <ul>
                             {RemoveDuplicatedAndSort(
                                 assignments
@@ -120,7 +121,7 @@ function Assignments() {
                                                     : [...prevItems, education]
                                             )
                                         }
-                                        className={isSelected ? 'filter-item selected' : 'filter-item'}
+                                        className={count === 0 ? 'filter-item disabled' : isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
                                         {education} <span>({count})</span>
                                     </li>

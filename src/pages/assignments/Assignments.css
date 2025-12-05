@@ -76,6 +76,12 @@ summary::-webkit-details-marker {
 .filter-item {
     cursor: pointer;
   }
+
+.filter-item.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
   
 .filter-item.selected {
     font-weight: 600;
