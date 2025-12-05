@@ -45,7 +45,8 @@ body{
 /*-----MAIN-----*/
 main {
   width: 954px;
-  margin: auto;
+  flex: 1;
+  align-self: center;
 }
 
 /*-----FONTS-----*/

@@ -2,10 +2,9 @@ import './Assignments.css'
 import Assignment from "../../components/assignment/Assignment";
 import assignments from "../../../src/assignments.json"
 import { useState } from 'react';
-import RemoveDuplicatedAndSort from '../../helpers/RemoveDuplicatedAndSort';
 import Button from '../../components/button/Button';
 import { XIcon } from "@phosphor-icons/react";
-import CountItemsInArray from '../../helpers/CountItemsInArray';
+import FilterItem from '../../components/filterItem/FilterItem';
 
 function Assignments() {
     const [filteredPlace, setFilteredPlace] = useState([]);
@@ -48,87 +47,9 @@ function Assignments() {
                             }}
                         />
                     )}
-                    <details open={openFilter === "place"}>
-                        <summary onClick={(e) => { e.preventDefault(); setOpenFilter(openFilter === "place" ? null : "place");}}>Plaats</summary>
-                        <ul>
-                            {RemoveDuplicatedAndSort(
-                                assignments
-                                    .map((assignment) => assignment.place)
-                            ).map((place) => {
-                                const isSelected = filteredPlace.includes(place);
-                                const count = CountItemsInArray(assignments, place, "place", filteredEducation, filteredHours, "education", "hours");
-                                return (
-                                    <li
-                                        key={place}
-                                        onClick={() =>
-                                            setFilteredPlace((prevItems) =>
-                                                prevItems.includes(place)
-                                                    ? prevItems.filter((p) => p !== place)
-                                                    : [...prevItems, place]
-                                            )
-                                        }
-                                        className={count === 0 ? 'filter-item disabled' : isSelected ? 'filter-item selected' : 'filter-item'}
-                                    >
-                                        {place} <span>({count})</span>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </details>
-                    <details open={openFilter === "hours"}>
-                        <summary onClick={(e) => { e.preventDefault(); setOpenFilter(openFilter === "hours" ? null : "hours");}}>Uren</summary>
-                        <ul>
-                            {RemoveDuplicatedAndSort(
-                                assignments
-                                    .map((assignment) => assignment.hours)
-                            ).map((hour) => {
-                                const isSelected = filteredHours.includes(hour);
-                                const count = CountItemsInArray(assignments, hour, "hours", filteredEducation, filteredPlace, "education", "place");
-                                return (
-                                    <li
-                                        key={hour}
-                                        onClick={() =>
-                                            setFilteredHours((prevItems) =>
-                                                prevItems.includes(hour)
-                                                    ? prevItems.filter((h) => h !== hour)
-                                                    : [...prevItems, hour]
-                                            )
-                                        }
-                                        className={count === 0 ? 'filter-item disabled' : isSelected ? 'filter-item selected' : 'filter-item'}
-                                    >
-                                        {hour}<span>({count})</span>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </details>
-                    <details open={openFilter === "education"}>
-                        <summary onClick={(e) => { e.preventDefault(); setOpenFilter(openFilter === "education" ? null : "education");}}>Opleidingsniveau</summary>
-                        <ul>
-                            {RemoveDuplicatedAndSort(
-                                assignments
-                                    .map((assignment) => assignment.education)
-                            ).map((education) => {
-                                const isSelected = filteredEducation.includes(education);
-                                const count = CountItemsInArray(assignments, education, "education", filteredPlace, filteredHours, "place", "hours");
-                                return (
-                                    <li
-                                        key={education}
-                                        onClick={() =>
-                                            setFilteredEducation((prevItems) =>
-                                                prevItems.includes(education)
-                                                    ? prevItems.filter((e) => e !== education)
-                                                    : [...prevItems, education]
-                                            )
-                                        }
-                                        className={count === 0 ? 'filter-item disabled' : isSelected ? 'filter-item selected' : 'filter-item'}
-                                    >
-                                        {education} <span>({count})</span>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </details>
+                    <FilterItem name= "place" filteredItem={filteredPlace} filteredItem2={filteredEducation} filteredItem3={filteredHours} setFilter={setFilteredPlace} filterNaam="Plaats" filter2="education" filter3="hours" openFilter={openFilter} setOpenFilter={setOpenFilter} />
+                    <FilterItem name= "hours" filteredItem={filteredHours} filteredItem2={filteredEducation} filteredItem3={filteredPlace} setFilter={setFilteredHours} filterNaam="Uren" filter2="education" filter3="place" openFilter={openFilter} setOpenFilter={setOpenFilter} />
+                    <FilterItem name= "education" filteredItem={filteredEducation} filteredItem2={filteredPlace} filteredItem3={filteredHours} setFilter={setFilteredEducation} filterNaam="Opleidingsniveau" filter2="place" filter3="hours" openFilter={openFilter} setOpenFilter={setOpenFilter} />
                 </div>
             </div>
             <div className='assignments-div'>
