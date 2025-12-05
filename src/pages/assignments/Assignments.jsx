@@ -5,6 +5,7 @@ import { useState } from 'react';
 import RemoveDuplicatedAndSort from '../../helpers/RemoveDuplicatedAndSort';
 import Button from '../../components/button/Button';
 import { XIcon } from "@phosphor-icons/react";
+import CountItemsInArray from '../../helpers/CountItemsInArray';
 
 function Assignments() {
     const [filteredPlace, setFilteredPlace] = useState([]);
@@ -29,7 +30,6 @@ function Assignments() {
         return matchPlace && matchHours && matchEducation;
     });
 
-
     return (<main>
         <section className='assignments-section'>
             <div className='filter'>
@@ -52,24 +52,10 @@ function Assignments() {
                         <ul>
                             {RemoveDuplicatedAndSort(
                                 assignments
-                                    /*.filter(
-                                        (assignment) =>
-                                          filteredPlace.includes(assignment.place) || 
-                                          (
-                                            (filteredHours.length === 0 || filteredHours.includes(assignment.hours)) &&
-                                            (filteredEducation.length === 0 || filteredEducation.includes(assignment.education))
-                                          )
-                                      )*/
                                     .map((assignment) => assignment.place)
                             ).map((place) => {
                                 const isSelected = filteredPlace.includes(place);
-                                const count = assignments.filter(
-                                    (a) =>
-                                        a.place === place &&
-                                        (filteredHours.length === 0 || filteredHours.includes(a.hours)) &&
-                                        (filteredEducation.length === 0 || filteredEducation.includes(a.education))
-                                ).length;
-
+                                const count = CountItemsInArray(assignments, place, "place", filteredEducation, filteredHours, "education", "hours");
                                 return (
                                     <li
                                         key={place}
@@ -96,13 +82,7 @@ function Assignments() {
                                     .map((assignment) => assignment.hours)
                             ).map((hour) => {
                                 const isSelected = filteredHours.includes(hour);
-                                const count = assignments.filter(
-                                    (a) =>
-                                        a.hours === hour &&
-                                        (filteredPlace.length === 0 || filteredPlace.includes(a.place)) &&
-                                        (filteredEducation.length === 0 || filteredEducation.includes(a.education))
-                                ).length;
-
+                                const count = CountItemsInArray(assignments, hour, "hours", filteredEducation, filteredPlace, "education", "place");
                                 return (
                                     <li
                                         key={hour}
@@ -115,7 +95,7 @@ function Assignments() {
                                         }
                                         className={isSelected ? 'filter-item selected' : 'filter-item'}
                                     >
-                                        {hour} <span>({count})</span>
+                                        {hour}<span>({count})</span>
                                     </li>
                                 );
                             })}
@@ -129,13 +109,7 @@ function Assignments() {
                                     .map((assignment) => assignment.education)
                             ).map((education) => {
                                 const isSelected = filteredEducation.includes(education);
-                                const count = assignments.filter(
-                                    (a) =>
-                                        a.education === education &&
-                                        (filteredHours.length === 0 || filteredHours.includes(a.hours)) &&
-                                        (filteredEducation.length === 0 || filteredEducation.includes(a.education))
-                                ).length;
-
+                                const count = CountItemsInArray(assignments, education, "education", filteredPlace, filteredHours, "place", "hours");
                                 return (
                                     <li
                                         key={education}
