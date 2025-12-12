@@ -1,26 +1,70 @@
-.assignments-section{
+.assignments-section {
     display: flex;
     gap: 10px;
     margin: 50px 0;
 }
 
-.filter{
+.filter {
     flex: 2;
+    position: relative;
 }
 
-.filtermenu{
+.reset-filter{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.filtermenu {
     background-color: var(--blue-color);
     color: var(--white-color);
     border-radius: 20px;
     width: 281px;
-    height: 548px;
     padding: 20px;
 }
 
-.assignments-div{
+.assignments-div {
     display: flex;
-    justify-content: center;
+    padding: 0 14.5px;
     flex: 5;
     flex-wrap: wrap;
     gap: 14px;
+}
+
+.no-assignments{
+    margin: 20px 0 0 20px;
+}
+
+.pagination-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.pagina-button{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pageBut {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.pageLink {
+    color: var(--black-color);
+    background-color: var(--grey-color);
+}
+
+.disable a{
+    pointer-events: none;
+    background-color: var(--dark-grey-color);
+}
+
+.active a{
+    border: 2px solid black;
+    border-bottom: 4px solid black;
 }

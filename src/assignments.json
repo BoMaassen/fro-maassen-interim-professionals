@@ -13,7 +13,7 @@
   {
     "id": 2,
     "title": "Software Developer",
-    "place": "Utrecht",
+    "place": "Nijmegen",
     "hours": "40",
     "salary": "55-70",
     "education": "Hbo",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "title": "Marketing Specialist",
-    "place": "Rotterdam",
+    "place": "Zwolle",
     "hours": "32",
     "salary": "45-60",
     "education": "Hbo",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "title": "Data Analyst",
-    "place": "Amsterdam",
+    "place": "Nijmegen",
     "hours": "36-40",
     "salary": "60-80",
     "education": "Wo",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "title": "Projectleider Bouw",
-    "place": "Eindhoven",
+    "place": "Nijmegen",
     "hours": "40",
     "salary": "70-95",
     "education": "Hbo",
