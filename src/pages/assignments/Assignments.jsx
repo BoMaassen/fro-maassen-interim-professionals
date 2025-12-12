@@ -5,12 +5,16 @@ import { useState } from 'react';
 import Button from '../../components/button/Button';
 import { XIcon } from "@phosphor-icons/react";
 import FilterItem from '../../components/filterItem/FilterItem';
+import ReactPaginate from "react-paginate";
 
 function Assignments() {
     const [filteredPlace, setFilteredPlace] = useState([]);
     const [filteredHours, setFilteredHours] = useState([]);
     const [filteredEducation, setFilteredEducation] = useState([]);
     const [openFilter, setOpenFilter] = useState(null);
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemPerPage = 10;
+    const offset = currentPage * itemPerPage;
 
     const filtersActive =
         filteredPlace.length > 0 ||
@@ -29,6 +33,12 @@ function Assignments() {
 
         return matchPlace && matchHours && matchEducation;
     });
+
+    const paginatedAssignments = filteredAssignments.slice(offset, offset + itemPerPage);
+
+    const handlePageChange = ({ selected }) => {
+        setCurrentPage(selected);
+      };
 
     return (<main>
         <section className='assignments-section'>
@@ -56,7 +66,7 @@ function Assignments() {
                 {filteredAssignments.length === 0 ? (
                     <h3 className='no-assignments'>Geen opdrachten gevonden voor deze selectie.</h3>
                 ) : (
-                    filteredAssignments.map((assignment) => (
+                    paginatedAssignments.map((assignment) => (
                         <Assignment
                             key={assignment.id}
                             title={assignment.title}
@@ -70,6 +80,24 @@ function Assignments() {
                     ))
                 )}
             </div>
+        </section>
+        <section className="pagination-section">
+            <ReactPaginate
+        previousLabel={"  Vorige  "}
+        nextLabel={"Volgende"}
+        breakLabel={"..."}
+        breakClassName={"break-me"}
+        pageCount={Math.ceil(filteredAssignments.length / itemPerPage)}
+        marginPagesDisplayed={5}
+        pageRangeDisplayed={2}
+        onPageChange={handlePageChange}
+        containerClassName={"pagina-button"}
+        activeClassName={"active"}
+        pageLinkClassName={"text-button pageLink"}
+        previousLinkClassName={"text-button pageBut"}
+        nextLinkClassName={"text-button pageBut" }
+        disabledClassName={"disable"}
+      />
         </section>
     </main>
     )

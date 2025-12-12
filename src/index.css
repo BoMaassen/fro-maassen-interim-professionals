@@ -12,6 +12,7 @@
   --red-color: #FF0000;
   --white-color: #fff;
   --black-color: #000;
+  --dark-grey-color: #00000080;
   --grey-color: #0000001A;
 }
 
@@ -35,6 +36,9 @@
 }
 .black{
   background-color: var(--black-color);
+}
+.grey{
+  background-color: var(--grey-color);
 }
 
 /*-----BODY-----*/

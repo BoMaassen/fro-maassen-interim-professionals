@@ -34,4 +34,37 @@
 .no-assignments{
     margin: 20px 0 0 20px;
 }
-  
+
+.pagination-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.pagina-button{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pageBut {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.pageLink {
+    color: var(--black-color);
+    background-color: var(--grey-color);
+}
+
+.disable a{
+    pointer-events: none;
+    background-color: var(--dark-grey-color);
+}
+
+.active a{
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+}
