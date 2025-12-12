@@ -7,6 +7,7 @@ import Home from './pages/home/home'
 import Contact from './pages/contact/Contact'
 import logoMip from "./assets/LOGO_MIP.png";
 import { Link } from 'react-router-dom'
+import Vacancy from './pages/vacancy/Vacancy.JSX'
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
     '/over-ons': 'Over ons',
     '/contact': 'Contact ons',
     '/opdrachten': 'Opdrachten',
+    '/opdracht/:id': "titel",
   };
   
   const getPageTitle = () => titles[location.pathname] || 'Pagina';
@@ -34,6 +36,7 @@ function App() {
         <Route path='/over-ons' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/opdrachten' element={<Assignments/>}/>
+        <Route path='/opdracht/:id' element={<Vacancy/>}/>
       </Routes>
       <div>
       <footer>

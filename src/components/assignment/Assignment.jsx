@@ -1,8 +1,12 @@
 import "./Assignment.css"
 import Button from "../button/Button";
 import {MapPinIcon, ClockIcon, CoinsIcon, StudentIcon, CaretRightIcon } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
 
-function Assignment({place, hours, salary, education, text, title, buttoncolor}){
+
+function Assignment({id, place, hours, salary, education, text, title, buttoncolor}){
+const navigate = useNavigate();
+
     return(
         <article className="assignment">
                     <h3>{title}</h3>
@@ -25,7 +29,7 @@ function Assignment({place, hours, salary, education, text, title, buttoncolor})
                         </div>
                     </div>
                     <p>{text}</p>
-                    <Button className={`icon-button ${buttoncolor}`} text={<CaretRightIcon size={15} color="var(--white-color)" weight="bold" />} />
+                    <Button className={`icon-button ${buttoncolor}`} text={<CaretRightIcon size={15} color="var(--white-color)" weight="bold" />} onClick={() => navigate(`/opdracht/${id}`) } />
                 </article>
     );
 }
