@@ -26,6 +26,7 @@ function Home() {
     .map((assignment) => (
       <Assignment
         key={assignment.id} 
+        id={assignment.id}
         title={assignment.title}
         place={assignment.place}
         hours={assignment.hours}

@@ -1,11 +1,18 @@
 import { useParams } from "react-router-dom";
 import assignments from "../../../src/assignments.json"
-import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon, CaretRightIcon } from "@phosphor-icons/react";
+import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon} from "@phosphor-icons/react";
+import { useEffect } from "react";
 
-function Vacancy() {
+function Vacancy({setPageTitle}) {
     const { id } = useParams();
     const opdracht = assignments[id - 1];
-    console.log(opdracht)
+
+    useEffect(() => {
+        if (opdracht) setPageTitle(opdracht.title);
+      }, [opdracht, setPageTitle]);
+    
+      if (!opdracht) return <p>Opdracht niet gevonden</p>;
+    
 
     return <>
         <main>
