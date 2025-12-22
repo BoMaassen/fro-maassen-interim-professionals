@@ -1,0 +1,30 @@
+/*-----FORM-----*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 468px;
+    height: 404px;
+}
+
+.name-form, .contacts-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+textarea{
+    border-radius: 20px;
+    border: none;
+    background-color: var(--grey-color);
+    padding: 15px;
+}
+
+textarea::placeholder{
+    color: var(--white-color);
+}
+
+textarea{
+    width: 468px;
+    height: 112px;
+}
