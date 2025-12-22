@@ -1,23 +1,24 @@
+import "./Vacancy.css"
 import { useParams } from "react-router-dom";
 import assignments from "../../../src/assignments.json"
-import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon} from "@phosphor-icons/react";
+import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon } from "@phosphor-icons/react";
 import { useEffect } from "react";
+import Paragraph from "../../components/paragraph/Paragraph";
 
-function Vacancy({setPageTitle}) {
+function Vacancy({ setPageTitle }) {
     const { id } = useParams();
     const opdracht = assignments[id - 1];
 
     useEffect(() => {
         if (opdracht) setPageTitle(opdracht.title);
-      }, [opdracht, setPageTitle]);
-    
-      if (!opdracht) return <p>Opdracht niet gevonden</p>;
-    
+    }, [opdracht, setPageTitle]);
+
+    if (!opdracht) return <p>Opdracht niet gevonden</p>;
 
     return <>
-        <main>
-            <section>
-                <div>
+        <main className="vacancy">
+            <section className="highlight-section">
+                <div className="highlight-block">
                     <h3>{opdracht.title}</h3>
                     <div className="highlights">
                         <div className="highlight place">
@@ -39,31 +40,17 @@ function Vacancy({setPageTitle}) {
                     </div>
                 </div>
             </section>
-            <section>
-                <div>
-                    <h3>Over het bedrijf</h3>
-                    <p>{opdracht.overHetBedrijf}</p>
-                </div>
-                <div>
-                    <h3>Wat ga je doen?</h3>
-                    <p>{opdracht.watGaJeDoen}</p>
-                </div>
-                <div>
-                    <h3>Wat we vereachten</h3>
-                    <ul>
-                        {opdracht.watWeVerwachten.map((verwachting, index) => (
-                            <li key={index}>{verwachting}</li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
-                    <h3>Wat we bieden</h3>
-                    <ul>
+            <section className="vacancy-section">
+                <Paragraph title="Over het bedrijf" text={opdracht.overHetBedrijf} className="paragraph" color="purple" />
+                <Paragraph title="Wat ga je doen?" text={opdracht.watGaJeDoen} className="paragraph" color="blue"  />
+                <Paragraph title="Wat we verwachten" text={<ul> {opdracht.watWeVerwachten.map((verwachting, index) => (
+                    <li key={index}>{verwachting}</li>
+                ))}</ul>} className="paragraph" color="red"/>
+                <Paragraph title="Wat we beiden" text={<ul>
                         {opdracht.watWeBieden.map((bieden, index) => (
                             <li key={index}>{bieden}</li>
                         ))}
-                    </ul>
-                </div>
+                    </ul>} className="paragraph" color="black" />
             </section>
         </main>
     </>
