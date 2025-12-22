@@ -43,10 +43,11 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 468px;
+    height: 404px;
 }
 
 .name-form, .contacts-form{
-    width: 468px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
