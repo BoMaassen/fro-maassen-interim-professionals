@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import Input from '../input/input';
 import Button from '../button/Button';
 
-function Formulier({title}) {
+function Formulier({title, children}) {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const recaptchaRef = useRef();
 
@@ -58,6 +58,7 @@ function Formulier({title}) {
             <label htmlFor='message'>
                 <textarea id='message' placeholder='Bericht' {...register("message")} />
             </label>
+            {children}
             <ReCAPTCHA ref={recaptchaRef} size="invisible" onChange={onReCAPTCHAChange}
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // test key
             />

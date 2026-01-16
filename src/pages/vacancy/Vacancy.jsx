@@ -1,16 +1,22 @@
 import "./Vacancy.css"
 import '../contact/Contact.css'
-import { Form, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import assignments from "../../../src/assignments.json"
 import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon } from "@phosphor-icons/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Paragraph from "../../components/paragraph/Paragraph";
 import Formulier from "../../components/form/Formulier";
+import Input from "../../components/input/input";
+import InputFile from "../../components/inputFile/InputFile.JSX";
+import { useForm } from 'react-hook-form';
 
 
 function Vacancy({ setPageTitle }) {
     const { id } = useParams();
     const opdracht = assignments[id - 1];
+    const { register, formState: { errors } } = useForm();
+    const [fileName, setFileName] = useState("Upload een CV");
+
 
     useEffect(() => {
         if (opdracht) setPageTitle(opdracht.title);
@@ -55,7 +61,17 @@ function Vacancy({ setPageTitle }) {
                     ))}
                 </ul>} className="paragraph" color="black" />
 
-                    <Formulier title="Reageer"/>
+                <Formulier title="Reageer">
+                    <InputFile inputId="content" name="content" className="input-file" labelName={fileName} onChange={(e) => {
+                        setFileName(e.target.files[0]?.name || "Upload een CV");
+                    }}
+                        validationRules={{
+                            required: { value: true, message: "Je moet een CV uploaden" },
+                        }} type="file"
+                        register={register}
+                        errors={errors}>
+                    </InputFile>
+                </Formulier>
             </section>
         </main>
     </>

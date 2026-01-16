@@ -1,7 +1,7 @@
 import './Assignments.css'
 import Assignment from "../../components/assignment/Assignment";
 import assignments from "../../../src/assignments.json"
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Button from '../../components/button/Button';
 import { XIcon } from "@phosphor-icons/react";
 import FilterItem from '../../components/filterItem/FilterItem';
@@ -15,6 +15,7 @@ function Assignments() {
     const [currentPage, setCurrentPage] = useState(0);
     const itemPerPage = 10;
     const offset = currentPage * itemPerPage;
+    const sectionRef = useRef(null);
 
     const filtersActive =
         filteredPlace.length > 0 ||
@@ -38,10 +39,11 @@ function Assignments() {
 
     const handlePageChange = ({ selected }) => {
         setCurrentPage(selected);
+        sectionRef.current?.scrollIntoView({ behavior: "smooth" });
       };
 
     return (<main>
-        <section className='assignments-section'>
+        <section ref={sectionRef} className='assignments-section'>
             <div className='filter'>
                 <div className='filtermenu'>
                     <h2>Filter</h2>

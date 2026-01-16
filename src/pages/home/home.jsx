@@ -4,8 +4,11 @@ import Usp from "../../components/ups/Usp";
 import Button from "../../components/button/Button";
 import Assignment from "../../components/assignment/Assignment";
 import assingments from "../../../src/assignments.json"
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+    const navigate = useNavigate();
+
     return (<main>
         <section className="introduction">
             <div className="intro-tekst">
@@ -21,23 +24,23 @@ function Home() {
         <section className="assignments">
             <h2>Interim opdrachten</h2>
             <div className="assignment-block">
-  {assingments
-    .filter((assignment) => assignment.highlight === true)
-    .map((assignment) => (
-      <Assignment
-        key={assignment.id} 
-        id={assignment.id}
-        title={assignment.title}
-        place={assignment.place}
-        hours={assignment.hours}
-        salary={assignment.salary}
-        education={assignment.education}
-        buttoncolor={assignment.buttoncolor}
-        text={assignment.text}
-      />
-    ))}
-</div>
-            <Button className="text-button purple" text="Bekijk alle opdrachen" />
+                {assingments
+                    .filter((assignment) => assignment.highlight === true)
+                    .map((assignment) => (
+                        <Assignment
+                            key={assignment.id}
+                            id={assignment.id}
+                            title={assignment.title}
+                            place={assignment.place}
+                            hours={assignment.hours}
+                            salary={assignment.salary}
+                            education={assignment.education}
+                            buttoncolor={assignment.buttoncolor}
+                            text={assignment.text}
+                        />
+                    ))}
+            </div>
+            <Button className="text-button purple" text="Bekijk alle opdrachen" onClick={() => navigate(`/opdrachten`)} />
         </section>
         <section className="contact">
             <h2>Contact ons</h2>

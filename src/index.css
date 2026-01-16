@@ -90,7 +90,7 @@ h5, li {
   font-size: 15px;
 }
 
-p {
+p, input, label, textarea {
   font-family: 'TheSans', sans-serif;
   font-size: 16px;
   font-weight: lighter;

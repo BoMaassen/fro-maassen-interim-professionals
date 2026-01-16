@@ -4,7 +4,7 @@ form{
     flex-direction: column;
     justify-content: space-between;
     width: 468px;
-    height: 404px;
+    min-height: 404px;
 }
 
 .name-form, .contacts-form{
@@ -21,7 +21,7 @@ textarea{
 }
 
 textarea::placeholder{
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 textarea{
