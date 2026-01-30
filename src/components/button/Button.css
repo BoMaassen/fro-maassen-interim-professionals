@@ -1,11 +1,23 @@
 /*-----BUTTON-----*/
-button {
+button, a.alink {
     border: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: var(--white-color);
+    cursor: pointer;
+}
+
+button:hover, a.alink:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    opacity: 95%;
+  }
+
+button:active, a.alink:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .text-button {
