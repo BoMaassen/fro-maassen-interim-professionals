@@ -4,7 +4,8 @@ import Usp from "../../components/ups/Usp";
 import Button from "../../components/button/Button";
 import Assignment from "../../components/assignment/Assignment";
 import assingments from "../../../src/assignments.json"
-import { useNavigate } from "react-router-dom";
+import Alink from "../../components/alink/Alink.JSX";
+import {useNavigate } from "react-router-dom";
 
 function Home() {
     const navigate = useNavigate();
@@ -40,13 +41,13 @@ function Home() {
                         />
                     ))}
             </div>
-            <Button className="text-button purple" text="Bekijk alle opdrachen" onClick={() => navigate(`/opdrachten`)} />
+            <Button className="text-button purple" text="Bekijk alle opdrachen" type="button" onClick={() => navigate(`/opdrachten`)} />
         </section>
         <section className="contact">
             <h2>Contact ons</h2>
             <div className="contact-buttons">
-                <Button className="phone-number text-button blue equal" text="06-41000136"></Button>
-                <Button className="contact-button text-button purple equal" text="Contact"></Button>
+                <Alink href="tel:0641000136" className="phone-number text-button blue equal alink" text="06-41000136"/>
+                <Button className="contact-button text-button purple equal" type="button" onClick={() => navigate(`/contact`)} text="Contact"/>
             </div>
         </section>
     </main>
