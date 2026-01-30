@@ -107,7 +107,7 @@ ul {
   list-style-type: none;
 }
 
-footer li {
+footer li, .afooter {
   font-family: 'TheSans', sans-serif;
   text-transform: uppercase;
   font-weight: lighter;
