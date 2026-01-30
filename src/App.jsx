@@ -1,4 +1,5 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation} from 'react-router-dom'
+import { useState } from 'react';
 import './App.css'
 import Navbar from './components/navbar/navbar'
 import About from './pages/about/About'
@@ -7,18 +8,27 @@ import Home from './pages/home/home'
 import Contact from './pages/contact/Contact'
 import logoMip from "./assets/LOGO_MIP.png";
 import { Link } from 'react-router-dom'
+import Vacancy from './pages/vacancy/Vacancy.JSX'
 
 function App() {
   const location = useLocation();
+  const [pageTitle, setPageTitle] = useState("");
 
+  // Statische titels
   const titles = {
     '/': 'Interim opdrachten voor professionals',
     '/over-ons': 'Over ons',
     '/contact': 'Contact ons',
     '/opdrachten': 'Opdrachten',
   };
-  
-  const getPageTitle = () => titles[location.pathname] || 'Pagina';
+
+  // Kies de titel op basis van locatie, fallback naar state
+  const getPageTitle = () => {
+    if (location.pathname.startsWith("/opdracht/")) {
+      return pageTitle || "Opdracht";
+    }
+    return titles[location.pathname] || "Pagina";
+  };
 
   return (
     <>
@@ -34,6 +44,7 @@ function App() {
         <Route path='/over-ons' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/opdrachten' element={<Assignments/>}/>
+        <Route path='/opdracht/:id' element={<Vacancy setPageTitle={setPageTitle} />} />
       </Routes>
       <div>
       <footer>

@@ -1,14 +1,27 @@
-input{
+input, .input-file{
     border-radius: 20px;
     border: none;
     background-color: var(--grey-color);
     padding: 15px;
+    
 }
 
-input{
+input, textarea, label{
+    font-size: 0.9rem;
+}
+
+input, .input-file{
     width: 223px;
 }
 
-input::placeholder{
-    color: var(--white-color);
+.input-file{
+    cursor: pointer;
 }
+
+input::placeholder{
+    color: var(--black-color);
+}
+ 
+.input-file input {
+    display: none;
+  }

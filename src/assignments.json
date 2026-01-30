@@ -8,7 +8,21 @@
     "education": "Hbo",
     "buttoncolor": "blue",
     "text": "Leidt tijdelijk een organisatie door een verandertraject.",
-    "highlight": true
+    "highlight": true,
+    "overHetBedrijf": "Een dynamische organisatie die zich richt op het begeleiden van transities en groei.",
+    "watGaJeDoen": "Je stuurt teams aan, bewaakt de voortgang en zorgt voor een soepele overgang tijdens het veranderproces.",
+    "watWeVerwachten": [
+      "Sterke leiderschapsvaardigheden",
+      "Ervaring met verandertrajecten",
+      "Communicatief sterk",
+      "Analytisch en resultaatgericht"
+    ],
+    "watWeBieden": [
+      "Uitdagende tijdelijke opdrachten",
+      "Professionele ondersteuning",
+      "Marktconform interim tarief",
+      "Flexibele werktijden"
+    ]
   },
   {
     "id": 2,
@@ -19,7 +33,21 @@
     "education": "Hbo",
     "buttoncolor": "purple",
     "text": "Ontwikkel en onderhoud moderne webapplicaties in een agile team.",
-    "highlight": true
+    "highlight": true,
+    "overHetBedrijf": "Een technologiegedreven organisatie die moderne softwareoplossingen bouwt.",
+    "watGaJeDoen": "Je ontwikkelt nieuwe features, lost bugs op en werkt nauw samen met designers en testers.",
+    "watWeVerwachten": [
+      "Ervaring met JavaScript en moderne frameworks",
+      "Kennis van API’s en databases",
+      "Teamspeler met probleemoplossend vermogen",
+      "Bereidheid om nieuwe technieken te leren"
+    ],
+    "watWeBieden": [
+      "Ruimte voor persoonlijke ontwikkeling",
+      "Agile werkomgeving",
+      "Mogelijkheid om thuis te werken",
+      "Trainingen en certificeringen"
+    ]
   },
   {
     "id": 3,
@@ -30,7 +58,21 @@
     "education": "Hbo",
     "buttoncolor": "purple",
     "text": "Creëer campagnes en vergroot het online bereik van het merk.",
-    "highlight": true
+    "highlight": true,
+    "overHetBedrijf": "Een groeiend marketingbureau met een focus op digitale campagnes.",
+    "watGaJeDoen": "Je bedenkt creatieve marketingstrategieën en analyseert campagneresultaten.",
+    "watWeVerwachten": [
+      "Ervaring met online marketing",
+      "Creatief en data-gedreven",
+      "Goede schrijfvaardigheid",
+      "Kennis van social media tools"
+    ],
+    "watWeBieden": [
+      "Inspirerende werkomgeving",
+      "Doorgroeimogelijkheden",
+      "Flexibele werktijden",
+      "Training in nieuwe marketingtools"
+    ]
   },
   {
     "id": 4,
@@ -41,7 +83,21 @@
     "education": "Wo",
     "buttoncolor": "red",
     "text": "Analyseer grote datasets en geef inzichten voor strategische keuzes.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een innovatief datagedreven bedrijf dat organisaties helpt betere beslissingen te nemen.",
+    "watGaJeDoen": "Je verzamelt en analyseert data en presenteert inzichten aan stakeholders.",
+    "watWeVerwachten": [
+      "Sterke analytische vaardigheden",
+      "Ervaring met Python of R",
+      "Kennis van dashboards (PowerBI/Tableau)",
+      "Nauwkeurig en kritisch"
+    ],
+    "watWeBieden": [
+      "Professioneel analytisch team",
+      "Mogelijkheid tot onderzoek",
+      "Aantrekkelijke arbeidsvoorwaarden",
+      "Hybride werken"
+    ]
   },
   {
     "id": 5,
@@ -52,7 +108,21 @@
     "education": "Hbo",
     "buttoncolor": "red",
     "text": "Verantwoordelijk voor planning en uitvoering van bouwprojecten.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een toonaangevend bouwbedrijf met diverse grote projecten.",
+    "watGaJeDoen": "Je leidt projecten van start tot oplevering en stuurt bouwteams aan.",
+    "watWeVerwachten": [
+      "Aantoonbare ervaring als projectleider",
+      "Kennis van wet- en regelgeving",
+      "Overzicht kunnen bewaren",
+      "Goede communicatieve vaardigheden"
+    ],
+    "watWeBieden": [
+      "Afwisselende projecten",
+      "Bedrijfsauto",
+      "Goede pensioenregeling",
+      "Uitstekende doorgroeimogelijkheden"
+    ]
   },
   {
     "id": 6,
@@ -63,8 +133,23 @@
     "education": "Mbo",
     "buttoncolor": "blue",
     "text": "Bied dagelijkse zorg en begeleiding aan patiënten.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een zorginstelling waar persoonlijke aandacht centraal staat.",
+    "watGaJeDoen": "Je verricht verpleegkundige handelingen en ondersteunt patiënten in hun herstel.",
+    "watWeVerwachten": [
+      "Verpleegkundige opleiding afgerond",
+      "Empathisch en stressbestendig",
+      "Nauwkeurig in rapportage",
+      "Bereid om in wisselende diensten te werken"
+    ],
+    "watWeBieden": [
+      "Hecht team",
+      "Opleidingsbudget",
+      "Onregelmatigheidstoeslagen",
+      "Goede balans tussen werk en privé"
+    ]
   },
+
   {
     "id": 7,
     "title": "Accountmanager B2B",
@@ -74,8 +159,23 @@
     "education": "Hbo",
     "buttoncolor": "black",
     "text": "Onderhoud klantrelaties en genereer nieuwe business.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een commerciële organisatie die focust op duurzame klantrelaties.",
+    "watGaJeDoen": "Je bezoekt klanten, maakt offertes en bouwt aan langdurige partnerships.",
+    "watWeVerwachten": [
+      "Commerciële instelling",
+      "Ervaring in B2B-sales",
+      "Communicatief sterk",
+      "Proactieve houding"
+    ],
+    "watWeBieden": [
+      "Bonusregeling",
+      "Auto van de zaak",
+      "Trainingen in verkoopvaardigheden",
+      "Veel vrijheid in je rol"
+    ]
   },
+
   {
     "id": 8,
     "title": "Docent Engels",
@@ -85,8 +185,23 @@
     "education": "Hbo",
     "buttoncolor": "purple",
     "text": "Geef lessen Engels aan middelbare scholieren.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een moderne school gericht op persoonlijke ontwikkeling van leerlingen.",
+    "watGaJeDoen": "Je bereidt lessen voor, geeft onderwijs en begeleidt leerlingen.",
+    "watWeVerwachten": [
+      "Bevoegd docent Engels",
+      "Pedagogisch sterk",
+      "Goed klassenmanagement",
+      "Affiniteit met jongeren"
+    ],
+    "watWeBieden": [
+      "Ondersteunend team",
+      "Ruimte voor eigen lesvormen",
+      "Vakinhoudelijke scholing",
+      "Goede werkdrukbalans"
+    ]
   },
+
   {
     "id": 9,
     "title": "UX Designer",
@@ -96,8 +211,23 @@
     "education": "Hbo",
     "buttoncolor": "blue",
     "text": "Ontwerp gebruiksvriendelijke interfaces en test met gebruikers.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een digital agency dat focust op gebruikerservaring en innovatie.",
+    "watGaJeDoen": "Je maakt wireframes, prototypes en voert gebruikersonderzoek uit.",
+    "watWeVerwachten": [
+      "Ervaring met Figma of Sketch",
+      "Sterk gevoel voor design",
+      "Kennis van UX research",
+      "Creatieve probleemoplosser"
+    ],
+    "watWeBieden": [
+      "Inspirerende projecten",
+      "Designteam met senior experts",
+      "Workshops en conferenties",
+      "Hybride werken"
+    ]
   },
+
   {
     "id": 10,
     "title": "Logistiek Planner",
@@ -107,8 +237,23 @@
     "education": "Mbo",
     "buttoncolor": "red",
     "text": "Plan en optimaliseer transport- en magazijnstromen.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een logistiek bedrijf dat werkt met moderne planningssystemen.",
+    "watGaJeDoen": "Je maakt planningen, communiceert met chauffeurs en bewaakt transportprocessen.",
+    "watWeVerwachten": [
+      "Nauwkeurigheid en overzicht",
+      "Ervaring in logistiek is een plus",
+      "Stressbestendigheid",
+      "Communicatieve vaardigheden"
+    ],
+    "watWeBieden": [
+      "Dynamische werkomgeving",
+      "Doorgroeimogelijkheden",
+      "Reiskostenvergoeding",
+      "Teamgerichte cultuur"
+    ]
   },
+
   {
     "id": 11,
     "title": "Business Consultant",
@@ -118,8 +263,23 @@
     "education": "Wo",
     "buttoncolor": "blue",
     "text": "Adviseer organisaties over strategie en digitalisering.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een consultancybedrijf met focus op innovatie en procesoptimalisatie.",
+    "watGaJeDoen": "Je analyseert bedrijfsprocessen en adviseert over verbeterstrategieën.",
+    "watWeVerwachten": [
+      "Analytisch en strategisch inzicht",
+      "Consulting ervaring is een pre",
+      "Goede presentatievaardigheden",
+      "Kennis van digitale trends"
+    ],
+    "watWeBieden": [
+      "Uitdagende opdrachten",
+      "Veel klantcontact",
+      "Opleidingen en trainingen",
+      "Leaseauto mogelijk"
+    ]
   },
+
   {
     "id": 12,
     "title": "Grafisch Ontwerper",
@@ -129,8 +289,23 @@
     "education": "Hbo",
     "buttoncolor": "purple",
     "text": "Ontwerp creatieve visuele concepten en huisstijlen.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een creatief ontwerpbureau dat werkt voor diverse klanten.",
+    "watGaJeDoen": "Je maakt visuele ontwerpen voor print en digitaal.",
+    "watWeVerwachten": [
+      "Kennis van Adobe Creative Cloud",
+      "Creatieve blik",
+      "Nauwkeurig kunnen werken",
+      "Oog voor detail"
+    ],
+    "watWeBieden": [
+      "Creatieve studio",
+      "Flexibele werktijden",
+      "Ruimte voor eigen ideeën",
+      "Leuke klantprojecten"
+    ]
   },
+
   {
     "id": 13,
     "title": "HR Adviseur",
@@ -140,8 +315,23 @@
     "education": "Hbo",
     "buttoncolor": "purple",
     "text": "Begeleid HR-processen en adviseer leidinggevenden.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een organisatie die waarde hecht aan duurzame inzetbaarheid.",
+    "watGaJeDoen": "Je ondersteunt managers en adviseert over HR-beleid.",
+    "watWeVerwachten": [
+      "Kennis van HR-procedures",
+      "Communicatief sterk",
+      "Oplossingsgericht",
+      "Ervaring met HR-systemen"
+    ],
+    "watWeBieden": [
+      "Fijne werksfeer",
+      "Goede secundaire voorwaarden",
+      "Persoonlijke ontwikkelingsmogelijkheden",
+      "Hybride werken"
+    ]
   },
+
   {
     "id": 14,
     "title": "Financieel Controller",
@@ -151,8 +341,23 @@
     "education": "Wo",
     "buttoncolor": "black",
     "text": "Controleer financiële rapportages en bewaak budgetten.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een financieel gezonde organisatie met focus op groei.",
+    "watGaJeDoen": "Je analyseert cijfers, stelt rapportages op en adviseert bij financiële beslissingen.",
+    "watWeVerwachten": [
+      "Sterke analytische vaardigheden",
+      "Ervaring als controller",
+      "Kennis van financiële systemen",
+      "Accuraat en gestructureerd"
+    ],
+    "watWeBieden": [
+      "Goede pensioenregeling",
+      "Doorgroei binnen finance",
+      "Hybride mogelijkheden",
+      "Aantrekkelijk salaris"
+    ]
   },
+
   {
     "id": 15,
     "title": "IT Support Engineer",
@@ -162,8 +367,23 @@
     "education": "Mbo",
     "buttoncolor": "red",
     "text": "Bied technische ondersteuning en los incidenten op.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een modern IT-bedrijf met een groeiend supportteam.",
+    "watGaJeDoen": "Je helpt gebruikers met IT-problemen en beheert systemen.",
+    "watWeVerwachten": [
+      "IT-gerelateerde opleiding",
+      "Problemen goed kunnen analyseren",
+      "Klantvriendelijk",
+      "Teamspeler"
+    ],
+    "watWeBieden": [
+      "Trainingstraject",
+      "Gezellig team",
+      "Reiskostenvergoeding",
+      "Doorgroeimogelijkheden"
+    ]
   },
+
   {
     "id": 16,
     "title": "Product Owner",
@@ -173,8 +393,23 @@
     "education": "Hbo",
     "buttoncolor": "blue",
     "text": "Stel prioriteiten voor het scrumteam en beheer de product backlog.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een digital-first organisatie die werkt met moderne scrumteams.",
+    "watGaJeDoen": "Je bewaakt de productvisie en bepaalt welke features worden ontwikkeld.",
+    "watWeVerwachten": [
+      "Affiniteit met softwareontwikkeling",
+      "Sterk stakeholdermanagement",
+      "Prioriteiten kunnen stellen",
+      "Ervaring met Agile/Scrum"
+    ],
+    "watWeBieden": [
+      "Scrumtrainingen",
+      "Zelfstandig werk",
+      "Inspirerende werkplek",
+      "Flexibele uren"
+    ]
   },
+
   {
     "id": 17,
     "title": "Verkoper Retail",
@@ -184,8 +419,23 @@
     "education": "Mbo",
     "buttoncolor": "blue",
     "text": "Help klanten in de winkel en zorg voor een prettige ervaring.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een bekende retailketen met focus op klantbeleving.",
+    "watGaJeDoen": "Je adviseert klanten, zorgt voor een nette winkel en handelt verkopen af.",
+    "watWeVerwachten": [
+      "Klantvriendelijkheid",
+      "Representatieve uitstraling",
+      "Flexibiliteit in werktijden",
+      "Teamspeler"
+    ],
+    "watWeBieden": [
+      "Gezellige werksfeer",
+      "Kortingen op producten",
+      "Trainingen in verkoop",
+      "Flexibele werktijden"
+    ]
   },
+
   {
     "id": 18,
     "title": "Operationeel Manager",
@@ -195,8 +445,23 @@
     "education": "Hbo",
     "buttoncolor": "purple",
     "text": "Leid de dagelijkse operatie en verbeter processen.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een organisatie die streeft naar optimale bedrijfsvoering.",
+    "watGaJeDoen": "Je bewaakt operationele processen en stuurt verschillende teams aan.",
+    "watWeVerwachten": [
+      "Leidinggevende ervaring",
+      "Analytisch inzicht",
+      "Procesmatig denken",
+      "Sterke communicatieve vaardigheden"
+    ],
+    "watWeBieden": [
+      "Grote mate van verantwoordelijkheid",
+      "Professioneel team",
+      "Goede arbeidsvoorwaarden",
+      "Bonusregeling"
+    ]
   },
+
   {
     "id": 19,
     "title": "Content Marketeer",
@@ -206,8 +471,23 @@
     "education": "Hbo",
     "buttoncolor": "black",
     "text": "Schrijf en beheer content voor websites en campagnes.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een creatief contentbureau dat werkt voor diverse nationale merken.",
+    "watGaJeDoen": "Je schrijft blogs, maakt social posts en werkt contentstrategieën uit.",
+    "watWeVerwachten": [
+      "Sterke schrijfvaardigheden",
+      "Creativiteit",
+      "Ervaring met contentplanning",
+      "Basiskennis SEO"
+    ],
+    "watWeBieden": [
+      "Creatieve vrijheid",
+      "Inspirerende klanten",
+      "Flexibele werktijden",
+      "Workshops en cursussen"
+    ]
   },
+
   {
     "id": 20,
     "title": "Research Scientist",
@@ -217,6 +497,20 @@
     "education": "Wo",
     "buttoncolor": "red",
     "text": "Doe onderzoek en ontwikkel innovatieve oplossingen.",
-    "highlight": false
+    "highlight": false,
+    "overHetBedrijf": "Een onderzoeksinstituut dat werkt aan duurzame innovaties.",
+    "watGaJeDoen": "Je voert experimenten uit, analyseert resultaten en publiceert bevindingen.",
+    "watWeVerwachten": [
+      "Onderzoekservaring",
+      "Sterke analytische vaardigheden",
+      "Nauwkeurig werken",
+      "Affiniteit met innovatie"
+    ],
+    "watWeBieden": [
+      "Moderne laboratoria",
+      "Samenwerking met experts",
+      "Onderzoeksbudget",
+      "Mogelijkheid tot publicatie"
+    ]
   }
 ]
