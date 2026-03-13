@@ -1,28 +1,31 @@
 import "./Vacancy.css"
 import '../contact/Contact.css'
-import { useParams } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import assignments from "../../../src/assignments.json"
 import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import Paragraph from "../../components/paragraph/Paragraph";
 import Formulier from "../../components/form/Formulier";
-import Input from "../../components/input/input";
 import InputFile from "../../components/inputFile/InputFile.JSX";
 import { useForm } from 'react-hook-form';
 
 
 function Vacancy({ setPageTitle }) {
-    const { id } = useParams();
-    const opdracht = assignments[id - 1];
-    const { register, formState: { errors } } = useForm();
-    const [fileName, setFileName] = useState("Upload een CV");
+     const { id } = useParams();
+  const opdracht = assignments[id - 1];
 
+  const { register, formState: { errors } } = useForm();
+  const [fileName, setFileName] = useState("Upload een CV");
 
-    useEffect(() => {
-        if (opdracht) setPageTitle(opdracht.title);
-    }, [opdracht, setPageTitle]);
+  useEffect(() => {
+    if (opdracht) {
+      setPageTitle(opdracht.title);
+    }
+  }, [opdracht, setPageTitle]);
 
-    if (!opdracht) return <p>Opdracht niet gevonden</p>;
+  if (!opdracht) {
+    return <Navigate to="*" replace />;
+  }
 
     return <>
         <main className="vacancy">
@@ -55,7 +58,7 @@ function Vacancy({ setPageTitle }) {
                 <Paragraph title="Wat we verwachten" text={<ul> {opdracht.watWeVerwachten.map((verwachting, index) => (
                     <li key={index}>{verwachting}</li>
                 ))}</ul>} className="paragraph" color="red" />
-                <Paragraph title="Wat we beiden" text={<ul>
+                <Paragraph title="Wat we bieden" text={<ul>
                     {opdracht.watWeBieden.map((bieden, index) => (
                         <li key={index}>{bieden}</li>
                     ))}
