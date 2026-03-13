@@ -11,7 +11,7 @@ function Footer(){
          <div>
           <h4><Link to="/">Maassen interim professionals</Link></h4>
           <ul>
-          <li>Kvk 123456789</li>
+          <li>Kvk 64724824</li>
           <li>Molenhoekplein 43</li>
           <li>6675BZ Valburg</li>
           </ul>

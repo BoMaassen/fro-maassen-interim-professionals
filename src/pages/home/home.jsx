@@ -4,8 +4,8 @@ import Usp from "../../components/ups/Usp";
 import Button from "../../components/button/Button";
 import Assignment from "../../components/assignment/Assignment";
 import assingments from "../../../src/assignments.json"
-import Alink from "../../components/alink/Alink.JSX";
-import {useNavigate } from "react-router-dom";
+import ContactSection from '../../components/contact/ContactSection';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
     const navigate = useNavigate();
@@ -13,13 +13,13 @@ function Home() {
     return (<main>
         <section className="introduction">
             <div className="intro-tekst">
-                <h2>Intro tekst</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempora quibusdam laudantium! Possimus suscipit, rerum autem deserunt facere eum nobis ab ducimus ullam exercitationem vero, veritatis atque eius cumque doloribus delectus iste! Cum tenetur culpa, esse quia quibusdam dicta corrupti exercitationem eveniet et a aperiam labore hic quisquam ducimus nihil necessitatibus distinctio sint illum in aliquid! Atque est id, sed eligendi fugiat deleniti omnis enim doloribus velit, voluptate vero consectetur quas tempore incidunt laborum repellat alias eaque culpa labore quod. Odio maiores nihil recusandae possimus repudiandae blanditiis </p>
+                <h2>Opdrachten die <br/>bij jou passen</h2>
+                <p>Voor starters, ervaren professionals en interimmanagers bieden wij uitdagende opdrachten binnen de overheid en publieke sector. Zowel in loondienst als op zzp-basis. Ontdek nieuwe mogelijkheden en bekijk direct de actuele opdrachten.</p>
             </div>
             <div className="usps">
-                <Usp icon={<TargetIcon size={26} />} title="Doelgericht" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt iste beatae est quam odio dolorum quasi, eveniet saepe nemo cumque voluptas, consequatur eligendi" classname="usp usp1" />
-                <Usp icon={<HandshakeIcon size={26} />} title="Persoonlijk" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt iste beatae est quam odio dolorum quasi, eveniet saepe nemo cumque voluptas, consequatur eligendi" classname="usp usp2" />
-                <Usp icon={<BriefcaseIcon size={26} />} title="Professioneel" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt iste beatae est quam odio dolorum quasi, eveniet saepe nemo cumque voluptas, consequatur eligendi" classname="usp usp3" />
+                <Usp icon={<TargetIcon size={26} />} title="Doelgericht" text="Wij werken doelgericht om de juiste match te maken tussen interim professional en organisatie. Zo komt elke zoektocht snel en efficiënt tot resultaat." classname="usp usp1" />
+                <Usp icon={<HandshakeIcon size={26} />} title="Persoonlijk" text="Bij ons staat persoonlijk contact centraal. We luisteren, begrijpen jouw wensen en begeleiden zowel kandidaten als opdrachtgevers op maat." classname="usp usp2" />
+                <Usp icon={<BriefcaseIcon size={26} />} title="Professioneel" text="Onze aanpak is professioneel en zorgvuldig, met oog voor kwaliteit en langdurige samenwerking. Zo zorgen we voor een match die echt werkt voor beide partijen." classname="usp usp3" />
             </div>
         </section>
         <section className="assignments">
@@ -43,13 +43,7 @@ function Home() {
             </div>
             <Button className="text-button purple" text="Bekijk alle opdrachen" type="button" onClick={() => navigate(`/opdrachten`)} />
         </section>
-        <section className="contact">
-            <h2>Contact ons</h2>
-            <div className="contact-buttons">
-                <Alink href="tel:0641000136" className="phone-number text-button blue equal alink" text="06-41000136"/>
-                <Button className="contact-button text-button purple equal" type="button" onClick={() => navigate(`/contact`)} text="Contact"/>
-            </div>
-        </section>
+        <ContactSection/>
     </main>
     )
 }

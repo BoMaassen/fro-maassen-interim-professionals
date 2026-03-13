@@ -1,0 +1,16 @@
+.error-section{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.error-section div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+    

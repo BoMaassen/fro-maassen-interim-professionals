@@ -5,6 +5,7 @@ import Navbar from './components/navbar/navbar'
 import About from './pages/about/About'
 import Assignments from './pages/assignments/Assignments'
 import Home from './pages/home/home'
+import Error from './pages/Error/Error'
 import Contact from './pages/contact/Contact'
 import Vacancy from './pages/vacancy/Vacancy.JSX'
 import Footer from './components/footer/Footer';
@@ -14,7 +15,6 @@ function App() {
   const location = useLocation();
   const [pageTitle, setPageTitle] = useState("");
 
-  // Statische titels
   const titles = {
     '/': 'Interim opdrachten voor professionals',
     '/over-ons': 'Over ons',
@@ -22,13 +22,21 @@ function App() {
     '/opdrachten': 'Opdrachten',
   };
 
-  // Kies de titel op basis van locatie, fallback naar state
-  const getPageTitle = () => {
-    if (location.pathname.startsWith("/opdracht/")) {
-      return pageTitle || "Opdracht";
+const getPageTitle = () => {
+  const path = location.pathname;
+
+  if (path.startsWith("/opdracht/")) {
+    const id = path.split("/")[2];
+
+    if (!id || !pageTitle) {
+      return "Pagina niet gevonden";
     }
-    return titles[location.pathname] || "Pagina";
-  };
+
+    return pageTitle;
+  }
+
+  return titles[path] || "Pagina niet gevonden";
+};
 
   return (
     <>
@@ -41,6 +49,7 @@ function App() {
     <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path="*" element={<Error />} />
         <Route path='/over-ons' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/opdrachten' element={<Assignments/>}/>
