@@ -2,7 +2,7 @@ import "./Formulier.css"
 import { useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useRef } from 'react';
-import Input from '../input/input';
+import Input from '../input/Input';
 import Button from '../button/Button';
 
 function Formulier({title, children}) {

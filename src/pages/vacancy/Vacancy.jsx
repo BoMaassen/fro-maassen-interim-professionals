@@ -6,7 +6,7 @@ import { MapPinIcon, ClockIcon, CoinsIcon, StudentIcon } from "@phosphor-icons/r
 import { useEffect, useState } from "react";
 import Paragraph from "../../components/paragraph/Paragraph";
 import Formulier from "../../components/form/Formulier";
-import InputFile from "../../components/inputFile/InputFile.JSX";
+import InputFile from "../../components/inputFile/InputFile.jsx";
 import { useForm } from 'react-hook-form';
 
 

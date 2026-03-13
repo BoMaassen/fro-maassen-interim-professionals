@@ -1,6 +1,6 @@
 import './ContactSection.css'
 import Button from "../../components/button/Button";
-import Alink from "../../components/alink/Alink.JSX";
+import Alink from "../../components/alink/Alink.jsx";
 import { useNavigate } from "react-router-dom";
 
 function ContactSection() {
