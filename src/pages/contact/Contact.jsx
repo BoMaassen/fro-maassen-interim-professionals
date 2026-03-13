@@ -4,7 +4,6 @@ import fotoFrank from "../../assets/frank-maassen.PNG";
 import { useForm } from 'react-hook-form';
 import { useRef } from 'react';
 import Formulier from '../../components/form/Formulier';
-import ContactSection from '../../components/contact/ContactSection';
 
 
 function Contact() {
