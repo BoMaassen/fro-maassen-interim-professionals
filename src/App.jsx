@@ -7,7 +7,7 @@ import Assignments from './pages/assignments/Assignments'
 import Home from './pages/home/home'
 import Error from './pages/Error/Error'
 import Contact from './pages/contact/Contact'
-import Vacancy from './pages/vacancy/Vacancy.JSX'
+import Vacancy from './pages/vacancy/Vacancy.jsx'
 import Footer from './components/footer/Footer';
 import ScrollToTop from './components/scrollToTop/scrollToTop';
 
