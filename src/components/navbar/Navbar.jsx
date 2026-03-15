@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logoMip from "../../assets/LOGO_MIP.png";
+import logoMip from "../../assets/LOGO-MAASSEN-01.svg";
 import { NavLink } from "react-router-dom";
 
 function Navbar(){

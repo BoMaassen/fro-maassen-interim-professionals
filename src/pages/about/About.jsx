@@ -1,5 +1,5 @@
 import './About.css'
-import logoMip from "../../assets/LOGO_MIP.png";
+import logoMip from "../../assets/LOGO-MAASSEN-01.svg";
 import Usp from "../../components/ups/Usp";
 import { BriefcaseIcon, HandshakeIcon, TargetIcon } from "@phosphor-icons/react";
 import ContactSection from '../../components/contact/ContactSection';

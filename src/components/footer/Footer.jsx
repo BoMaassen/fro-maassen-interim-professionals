@@ -1,5 +1,5 @@
 import "./Footer.css"
-import logoMip from "../../assets/LOGO_MIP.png";
+import logoMip from "../../assets/LOGO-MAASSEN-01.svg";
 import { Link } from 'react-router-dom'
 import assingments from "../../../src/assignments.json"
 
