@@ -1,3 +1,53 @@
+/* =========================
+   PROZAK
+   ========================= */
+
+   @font-face {
+    font-family: "Prozak";
+    src: url("/src/assets/fonts/Prozak\ light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Prozak";
+    src: url("/src/assets/fonts/Prozak_.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Prozak";
+    src: url("/src/assets/fonts/Prozak\ bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* =========================
+     THESANSs
+     ========================= */
+  
+  @font-face {
+    font-family: "TheSans";
+    src: url("/src/assets/fonts/TheSans-2_ExtraLight_TRIAL.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "TheSans";
+    src: url("/src/assets/fonts/TheSans-3_Light_TRIAL.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "TheSans";
+    src: url("/src/assets/fonts/TheSans-4_SemiLight_TRIAL.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
 /*-----CSS RESET-----*/
 * {
   box-sizing: border-box;
@@ -64,10 +114,10 @@ a,
 button, 
 summary,
 li {
-  font-family: 'Prozak', sans-serif;
+  font-family: "Prozak", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 h1 {
@@ -90,10 +140,12 @@ h5, li {
   font-size: 15px;
 }
 
-p, input, label, textarea {
-  font-family: 'TheSans', sans-serif;
+p, input, label, textarea, .paragraph li {
+  font-family: "TheSans", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
 }
 
 /*-----LINKS-----*/
@@ -108,9 +160,9 @@ ul {
 }
 
 footer li, .afooter {
-  font-family: 'TheSans', sans-serif;
+  font-family: "TheSans", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 10px;
 }
 
