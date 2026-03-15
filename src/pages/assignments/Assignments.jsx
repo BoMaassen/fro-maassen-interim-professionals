@@ -49,9 +49,9 @@ function Assignments() {
                     <h2>Filter</h2>
                     {filtersActive && (
                         <Button
-                            className="reset-filter icon-button black"
+                            className="reset-filter black"
                             type="button"
-                            icon={<XIcon size={20} weight="bold" />}
+                            text="wis filters"
                             onClick={() => {
                                 setFilteredPlace([]);
                                 setFilteredHours([]);
